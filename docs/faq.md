@@ -22,7 +22,13 @@ Currently, it simply uses the number of locations — basically, a character cou
 
 ### How to use text-to-speech?
 
-Foliate supports text-to-speech with speech-dispatcher. To use it, you need to install `speech-dispatcher` and output modules such as `espeak-ng`.
+Foliate supports text-to-speech with speech-dispatcher, so make sure `speech-dispatcher` and output modules such as `espeak-ng` are installed on your system.
+
+To use it, click on the <i>Narration</i> button (the one with a headphones icon) on the navbar (which is available by hovering or tapping on the footer area). Note that if the book has embedded audio ([EPUB Media Overlays](https://www.w3.org/TR/epub/#sec-media-overlays)), the <i>Narration</i> button would show controls for the embedded media, and TTS would not be available in that case.
+
+Alternatively you can select some text and choose <i>Speak from Here</i> from the selection menu. Though you still need to use the <i>Narration</i> button if you want to stop the speech output.
+
+The default voice may sound somewhat robotic. You can use [Pied](https://pied.mikeasoft.com/) (a frontend for configuring [Piper](https://github.com/rhasspy/piper)) to change that to a more natural sounding voice. See [this](https://askubuntu.com/a/1526192/124466) for more details.
 
 ### How to use custom themes?
 
@@ -44,7 +50,11 @@ Themes are defined as JSON files. Here is an example theme:
 }
 ```
 
-To install themes, you need to put them in `/home/user/.config/com.github.johnfactotum.Foliate/themes/`. If you're using Flatpak, the files should be placed in `~/.var/app/com.github.johnfactotum.Foliate/config/com.github.johnfactotum.Foliate/themes/`.
+To install themes, you need to put them in `/home/user/.config/com.github.johnfactotum.Foliate/themes/`.
+
+When using Flatpak, the files should be placed in `~/.var/app/com.github.johnfactotum.Foliate/config/com.github.johnfactotum.Foliate/themes/`.
+
+When using Snap, the files should be placed in `~/snap/foliate/current/.config/com.github.johnfactotum.Foliate/themes/`.
 
 ### Can I set my own custom CSS styles?
 
@@ -58,7 +68,9 @@ Tip: you can use the [`:lang()`](https://developer.mozilla.org/en-US/docs/Web/CS
 
 Your reading progress, bookmarks, and annotations are saved in `~/.local/share/com.github.johnfactotum.Foliate`.
 
-If you're using the Flatpak version, they should be in `~/.var/app/com.github.johnfactotum.Foliate/data/com.github.johnfactotum.Foliate`.
+When using Flatpak, they are placed in `~/.var/app/com.github.johnfactotum.Foliate/data/com.github.johnfactotum.Foliate`.
+
+When using Snap, they are placed in `~/snap/foliate/current/.local/share/com.github.johnfactotum.Foliate`.
 
 The data for each book is stored in a JSON file named after the book's identifier. If you'd like to sync or backup your progress and notes, simply copy these files and everything should just work™.
 

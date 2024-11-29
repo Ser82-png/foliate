@@ -32,7 +32,7 @@ body {
     }
 }
 foliate-view::part(head), foliate-view::part(foot) {
-    font-family: system-ui;
+    font: menu;
     font-size: 9pt;
 }
 foliate-view {
@@ -111,6 +111,7 @@ foliate-view {
 }
 #footnote-dialog main {
     min-height: 0;
+    flex: 1
 }
 @media (max-width: 500px) {
     #footnote-dialog {
@@ -136,5 +137,4 @@ foliate-view {
         </form>
     </div>
 </dialog>
-<script src="../foliate-js/vendor/pdfjs/pdf.js"></script>
 <script src="reader.js" type="module"></script>

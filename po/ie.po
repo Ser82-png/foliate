@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.johnfactotum.Foliate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-19 04:33+0000\n"
+"POT-Creation-Date: 2024-11-28 11:04+0800\n"
 "PO-Revision-Date: 2020-07-06 13:17+0800\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: \n"
@@ -23,8 +23,8 @@ msgstr ""
 msgid "Bookmark deleted"
 msgstr "Marca-págines"
 
-#: src/annotations.js:138 src/annotations.js:173 src/book-viewer.js:809
-#: src/library.js:826
+#: src/annotations.js:138 src/annotations.js:173 src/book-viewer.js:805
+#: src/library.js:865
 msgid "Undo"
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Cannot Import Annotations"
 msgstr "Importar anotationes..."
 
-#: src/annotations.js:626 src/book-viewer.js:720 src/library.js:605
+#: src/annotations.js:626 src/book-viewer.js:716 src/library.js:644
 #, fuzzy
 msgid "An error occurred"
 msgstr "Un errore evenit."
@@ -150,65 +150,65 @@ msgstr "OIS <mistresssilvara@hotmail.com>, 2020"
 msgid "Source Code"
 msgstr "Orígine: "
 
-#: src/book-info.js:125 src/library.js:75
+#: src/book-info.js:133 src/library.js:75
 msgid "Publisher"
 msgstr "Publicator"
 
 #. Translators: this is the heading for the publication date
-#: src/book-info.js:127 src/library.js:76
+#: src/book-info.js:135 src/library.js:76
 #, fuzzy
 msgid "Published"
 msgstr "Publicator"
 
 #. Translators: this is the heading for the modified date
-#: src/book-info.js:129
+#: src/book-info.js:137
 #, fuzzy
 msgid "Updated"
 msgstr "Actualisar"
 
-#: src/book-info.js:130 src/library.js:77
+#: src/book-info.js:138 src/library.js:77
 msgid "Language"
 msgstr "Lingue"
 
-#: src/book-info.js:131
+#: src/book-info.js:139
 #, fuzzy
 msgid "Translated by"
 msgstr "Traducter"
 
-#: src/book-info.js:132
+#: src/book-info.js:140
 msgid "Edited by"
 msgstr ""
 
-#: src/book-info.js:133
+#: src/book-info.js:141
 msgid "Narrated by"
 msgstr ""
 
-#: src/book-info.js:134
+#: src/book-info.js:142
 msgid "Illustrated by"
 msgstr ""
 
-#: src/book-info.js:135
+#: src/book-info.js:143
 msgid "Produced by"
 msgstr ""
 
-#: src/book-info.js:136
+#: src/book-info.js:144
 msgid "Artwork by"
 msgstr ""
 
-#: src/book-info.js:137
+#: src/book-info.js:145
 msgid "Color by"
 msgstr ""
 
-#: src/book-info.js:138
+#: src/book-info.js:146
 #, fuzzy
 msgid "Contributors"
 msgstr "Contenete"
 
-#: src/book-info.js:139 src/library.js:78 src/ui/navbar.ui:283
+#: src/book-info.js:147 src/library.js:78 src/ui/navbar.ui:283
 msgid "Identifier"
 msgstr "Identificator"
 
-#: src/book-info.js:171 src/ui/book-item.ui:11 src/ui/book-row.ui:11
+#: src/book-info.js:179 src/ui/book-item.ui:15 src/ui/book-row.ui:15
 #: src/ui/book-viewer.ui:368
 msgid "About This Book"
 msgstr "Pri ti-ci libre"
@@ -274,79 +274,79 @@ msgstr ""
 msgid "Go to Bibliography"
 msgstr ""
 
-#: src/book-viewer.js:619
+#: src/book-viewer.js:622
 #, fuzzy
 msgid "Remove bookmark"
 msgstr "Remover li libre"
 
-#: src/book-viewer.js:620
+#: src/book-viewer.js:623
 #, fuzzy
 msgid "Add bookmark"
 msgstr "Adjunter libres"
 
-#: src/book-viewer.js:718
+#: src/book-viewer.js:714
 #, fuzzy
 msgid "File not found"
 msgstr "File ne esset trovat."
 
-#: src/book-viewer.js:719
+#: src/book-viewer.js:715
 #, fuzzy
 msgid "File type not supported"
 msgstr "Tip de file ne es suportat."
 
-#: src/book-viewer.js:808
+#: src/book-viewer.js:804
 #, fuzzy
 msgid "Annotation deleted"
 msgstr "Anotation"
 
-#: src/book-viewer.js:876
+#: src/book-viewer.js:877
 #, javascript-format
 msgid ""
 "‘%s’\n"
 "—%s, “%s”, p. %s"
 msgstr ""
 
-#: src/book-viewer.js:878
+#: src/book-viewer.js:879
 #, javascript-format
 msgid ""
 "‘%s’\n"
 "—“%s”, p. %s"
 msgstr ""
 
-#: src/book-viewer.js:879
+#: src/book-viewer.js:880
 #, javascript-format
 msgid "‘%s’ (p. %s)"
 msgstr ""
 
-#: src/book-viewer.js:882
+#: src/book-viewer.js:883
 #, javascript-format
 msgid ""
 "‘%s’\n"
 "—%s, “%s”"
 msgstr ""
 
-#: src/book-viewer.js:884
+#: src/book-viewer.js:885
 #, javascript-format
 msgid ""
 "‘%s’\n"
 "—“%s”"
 msgstr ""
 
-#: src/book-viewer.js:885
+#: src/book-viewer.js:886
 #, javascript-format
 msgid "‘%s’"
 msgstr ""
 
-#: src/book-viewer.js:903
+#: src/book-viewer.js:904
 #, javascript-format
 msgid "Image from “%s”"
 msgstr "Image ex «%s»"
 
-#: src/book-viewer.js:903
+#: src/book-viewer.js:904
 msgid "Image"
 msgstr "Image"
 
-#: src/format.js:122
+#: src/format.js:127
 #, javascript-format
 msgid "of %d"
 msgstr "ex %d"
@@ -437,81 +437,89 @@ msgstr ""
 msgid "Contributor"
 msgstr "Contenete"
 
-#: src/library.js:433
+#: src/library.js:438
 #, fuzzy
 msgid "Remove Book?"
 msgstr "Remover li libre"
 
-#: src/library.js:434
+#: src/library.js:439
 msgid "Reading progress, annotations, and bookmarks will be permanently lost"
 msgstr ""
 
-#: src/library.js:436
+#: src/library.js:441
 msgid "_Cancel"
 msgstr ""
 
-#: src/library.js:437
+#: src/library.js:442
 msgid "_Remove"
 msgstr ""
 
-#: src/library.js:605
+#: src/library.js:472
+msgid "Failed to Open"
+msgstr ""
+
+#: src/library.js:473
+msgid "Could not open the file with the selected application"
+msgstr ""
+
+#: src/library.js:644
 msgid "Download Failed"
 msgstr ""
 
-#: src/library.js:659
+#: src/library.js:698
 msgid "Rename…"
 msgstr ""
 
-#: src/library.js:660 src/ui/book-item.ui:21 src/ui/book-row.ui:21
+#: src/library.js:699 src/ui/book-item.ui:25 src/ui/book-row.ui:25
 msgid "Remove"
 msgstr ""
 
-#: src/library.js:680 src/library.js:681
+#: src/library.js:719 src/library.js:720
 msgid "Rename"
 msgstr ""
 
-#: src/library.js:686
+#: src/library.js:725
 msgid "Name"
 msgstr ""
 
-#: src/library.js:701
+#: src/library.js:740
 #, fuzzy
 msgid "All Books"
 msgstr "Menú"
 
-#: src/library.js:707
+#: src/library.js:746
 #, fuzzy
 msgid "Add Catalog…"
 msgstr "Adjunter libres..."
 
-#: src/library.js:774 src/ui/book-viewer.ui:130 src/ui/book-viewer.ui:239
+#: src/library.js:813 src/ui/book-viewer.ui:130 src/ui/book-viewer.ui:239
 #: src/ui/library.ui:93
 msgid "Library"
 msgstr "Biblioteca"
 
-#: src/library.js:782
+#: src/library.js:821
 msgid "Catalogs"
 msgstr ""
 
-#: src/library.js:825
+#: src/library.js:864
 msgid "Catalog removed"
 msgstr ""
 
-#: src/library.js:912 src/library.js:917
+#: src/library.js:951 src/library.js:956
 msgid "Add Catalog"
 msgstr ""
 
-#: src/library.js:913
+#: src/library.js:952
 msgid "Add"
 msgstr ""
 
-#: src/library.js:918
+#: src/library.js:957
 msgid ""
 "You can browse and download books from OPDS catalogs. <a href=\"https://opds."
 "io\">Learn More…</a>"
 msgstr ""
 
-#: src/library.js:922
+#: src/library.js:961
 msgid "URL"
 msgstr ""
 
@@ -520,86 +528,91 @@ msgstr ""
 msgid "Foliate"
 msgstr "Foliate"
 
-#: src/selection-tools.js:72
+#: src/selection-tools.js:33
 msgid "Dictionary"
 msgstr "Dictionarium"
 
-#: src/selection-tools.js:96
+#: src/selection-tools.js:37
 msgid ""
 "From <a id=\"link\">Wiktionary</a>, released under the <a href=\"https://"
 "creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA License</a>."
 msgstr ""
 
-#: src/selection-tools.js:144 src/selection-tools.js:232
+#: src/selection-tools.js:38 src/selection-tools.js:51
 #, fuzzy
 msgid "No Definitions Found"
 msgstr "Null resultates trovat"
 
-#: src/selection-tools.js:146
+#: src/selection-tools.js:39
 msgid "Search on Wiktionary"
 msgstr ""
 
-#: src/selection-tools.js:183
+#: src/selection-tools.js:46
 msgid "Wikipedia"
 msgstr "Wikipedia"
 
-#: src/selection-tools.js:202
+#: src/selection-tools.js:50
 msgid ""
 "From <a id=\"link\">Wikipedia</a>, released under the <a href=\"https://en."
 "wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-"
 "ShareAlike_4.0_International_License\">CC BY-SA License</a>."
 msgstr ""
 
-#: src/selection-tools.js:234
+#: src/selection-tools.js:52
 #, fuzzy
 msgid "Search on Wikipedia"
 msgstr "Wikipedia"
 
-#: src/selection-tools.js:243
+#: src/selection-tools.js:59
 msgid "Translate"
 msgstr "Traducter"
 
-#: src/selection-tools.js:269
+#: src/selection-tools.js:65
 msgid "Translation by Google Translate"
 msgstr ""
 
-#: src/selection-tools.js:280
+#: src/selection-tools.js:66
 msgid "Cannot retrieve translation"
 msgstr ""
 
-#: src/themes.js:9
+#: src/selection-tools.js:67
+#, fuzzy
+msgid "Search…"
+msgstr "Serchar"
+
+#: src/themes.js:8
 msgid "Default"
 msgstr ""
 
-#: src/themes.js:14
+#: src/themes.js:13
 msgid "Gray"
 msgstr ""
 
-#: src/themes.js:19
+#: src/themes.js:18
 msgid "Sepia"
 msgstr ""
 
-#: src/themes.js:24
+#: src/themes.js:23
 msgid "Grass"
 msgstr ""
 
-#: src/themes.js:29
+#: src/themes.js:28
 msgid "Cherry"
 msgstr ""
 
-#: src/themes.js:34
+#: src/themes.js:33
 msgid "Sky"
 msgstr ""
 
-#: src/themes.js:39
+#: src/themes.js:38
 msgid "Solarized"
 msgstr ""
 
-#: src/themes.js:44
+#: src/themes.js:43
 msgid "Gruvbox"
 msgstr ""
 
-#: src/themes.js:49
+#: src/themes.js:48
 msgid "Nord"
 msgstr ""
 
@@ -626,7 +639,7 @@ msgstr "Marcar"
 msgid "Delete"
 msgstr "Remover"
 
-#: src/ui/annotation-popover.ui:28 src/ui/book-item.ui:61 src/ui/book-row.ui:75
+#: src/ui/annotation-popover.ui:28 src/ui/book-item.ui:65 src/ui/book-row.ui:79
 #: src/ui/image-viewer.ui:62
 msgid "Menu"
 msgstr "Menú"
@@ -640,7 +653,11 @@ msgstr "Adjunter libres..."
 msgid "Open in New Window"
 msgstr ""
 
-#: src/ui/book-item.ui:15 src/ui/book-row.ui:15 src/ui/book-viewer.ui:25
+#: src/ui/book-item.ui:9 src/ui/book-row.ui:9
+msgid "Open with External App"
+msgstr ""
+
+#: src/ui/book-item.ui:19 src/ui/book-row.ui:19 src/ui/book-viewer.ui:25
 msgid "Export Annotations…"
 msgstr "Exportar anotationes..."
 
@@ -1201,34 +1218,56 @@ msgstr "Trovar in li libre"
 msgid "Quick dictionary lookup"
 msgstr ""
 
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:30
-#, fuzzy
-msgid "Book"
-msgstr "Menú"
-
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:31
-msgid "EPUB"
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:55
+msgid "Fixed end of chapter cut off when chapter starts with page break"
 msgstr ""
 
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:32
-msgid "Ebook"
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:56
+msgid "Fixed incorrect text wrapping in tables"
 msgstr ""
 
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:33
-msgid "Reader"
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:57
+msgid "Fixed a performance issue with OPDS catalogs"
 msgstr ""
 
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:34
-#, fuzzy
-msgid "Viewer"
-msgstr "Menú"
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:64
+msgid "Added support for OPDS catalogs, now with support for OPDS 2.0"
+msgstr ""
 
-#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:63
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:65
+msgid "Added option to override publisher font"
+msgstr ""
+
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:66
+msgid "Added option to reduce animation"
+msgstr ""
+
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:67
+msgid "Added support for JPEG XL in CBZ"
+msgstr ""
+
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:68
+msgid "Fixed getting file from Tracker in Flatpak"
+msgstr ""
+
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:69
+msgid "Fixed parsing of non-year-only first-century and BCE dates"
+msgstr ""
+
+#: data/com.github.johnfactotum.Foliate.metainfo.xml.in:76
 msgid ""
 "Foliate has been rewritten from scratch with a new e-book rendering library "
 "and the latest platform libraries, GTK 4 and Libadwaita, with refreshed UI "
 "and improved performance."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Book"
+#~ msgstr "Menú"
+
+#, fuzzy
+#~ msgid "Viewer"
+#~ msgstr "Menú"
 
 #~ msgid "John Factotum"
 #~ msgstr "John Factotum"

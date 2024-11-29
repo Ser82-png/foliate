@@ -21,18 +21,10 @@
         </ul>
     </description>
     <developer_name translate="no">John Factotum</developer_name>
+    <developer id="io.github.johnfactotum">
+        <name translate="no">John Factotum</name>
+    </developer>
     <launchable type="desktop-id">com.github.johnfactotum.Foliate.desktop</launchable>
-    <categories>
-      <category>Office</category>
-      <category>Viewer</category>
-    </categories>
-    <keywords>
-      <keyword>Book</keyword>
-      <keyword>EPUB</keyword>
-      <keyword>Ebook</keyword>
-      <keyword>Reader</keyword>
-      <keyword>Viewer</keyword>
-    </keywords>    
     <url type="homepage">https://johnfactotum.github.io/foliate/</url>
     <url type="vcs-browser">https://github.com/johnfactotum/foliate</url>
     <url type="bugtracker">https://github.com/johnfactotum/foliate/issues</url>
@@ -57,8 +49,40 @@
         </screenshot>
     </screenshots>
     <releases>
-        <release version="3.0.1" date="2023-11-20"/>
+        <release version="3.2.0" date="2024-11-28">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.2.0</url>
+            <description>
+                <p>Various improvments and fixes, including a revamped translation tool, better focus handling, and better PDF rendering, now faster and no longer blurry.</p>
+            </description>
+        </release>
+        <release version="3.1.1" date="2024-04-03">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.1.1</url>
+            <description>
+                <ul>
+                    <li>Fixed end of chapter cut off when chapter starts with page break</li>
+                    <li>Fixed incorrect text wrapping in tables</li>
+                    <li>Fixed a performance issue with OPDS catalogs</li>
+                </ul>
+            </description>
+        </release>
+        <release version="3.1.0" date="2024-01-05">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.1.0</url>
+            <description>
+                <ul>
+                    <li>Added support for OPDS catalogs, now with support for OPDS 2.0</li>
+                    <li>Added option to override publisher font</li>
+                    <li>Added option to reduce animation</li>
+                    <li>Added support for JPEG XL in CBZ</li>
+                    <li>Fixed getting file from Tracker in Flatpak</li>
+                    <li>Fixed parsing of non-year-only first-century and BCE dates</li>
+                </ul>
+            </description>
+        </release>
+        <release version="3.0.1" date="2023-11-20">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.0.1</url>
+        </release>
         <release version="3.0.0" date="2023-11-12">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.0.0</url>
             <description>
                 <p>Foliate has been rewritten from scratch with a new e-book rendering library and the latest platform libraries, GTK 4 and Libadwaita, with refreshed UI and improved performance.</p>
             </description>
@@ -68,4 +92,8 @@
     <custom>
         <value key="Purism::form_factor">mobile</value>
     </custom>
+    <branding>
+      <color type="primary" scheme_preference="light">#7bf1d9</color>
+      <color type="primary" scheme_preference="dark">#0b6275</color>
+    </branding>
 </component>

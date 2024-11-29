@@ -8,8 +8,8 @@
 }
 :root {
     overflow-wrap: anywhere;
+    font: menu;
     font-size: 11pt;
-    font-family: system-ui;
     --shade: rgba(0, 0, 0, .07);
     --raised: rgba(0, 0, 0, .1);
     --pressed: rgba(0, 0, 0, .2);
@@ -160,6 +160,14 @@ button[role="menuitem"] {
 @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+#loading:not([hidden]) svg path {
+    animation: .6s linear infinite rotate;
+    transform-origin: center;
+}
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* feed
@@ -648,7 +656,7 @@ opds-pub-full > [slot="actions"]:not(:has([data-rel$="sample"]:first-child)) > *
     <foliate-scrolled id="loading">
         <foliate-center>
             <svg width="48" height="48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M24 8A 16 16 0 0 0 24 40"><animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="600ms" repeatCount="indefinite"/></path>
+                <path d="M24 8A 16 16 0 0 0 24 40"></path>
             </svg>
             <h1></h1>
         </foliate-center>

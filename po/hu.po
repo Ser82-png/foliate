@@ -1,277 +1,277 @@
-# Farsi translations for com.github.johnfactotum.Foliate package.
-# Copyright (C) 2020 THE com.github.johnfactotum.Foliate'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.johnfactotum.Foliate package.
-# Meysam Pour Ganji <p.g.meysam@gmail.com>, 2023.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.johnfactotum.Foliate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-28 11:04+0800\n"
-"PO-Revision-Date: 2023-12-13 12:45+0330\n"
-"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
-"Language-Team: \n"
-"Language: fa_IR\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ádám Szabó <canis_major@outlook.hu>\n"
+"Language-Team: Hungarian <canis_major@outlook.hu>\n"
+"Language: hu_HU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #: src/annotations.js:137 src/annotations.js:172
 msgid "Bookmark deleted"
-msgstr "نشانک حذف شد"
+msgstr "Könyvjelző törölve"
 
 #: src/annotations.js:138 src/annotations.js:173 src/book-viewer.js:805
 #: src/library.js:865
 msgid "Undo"
-msgstr "واگرد"
+msgstr "Visszavonás"
 
 #: src/annotations.js:437
 msgid "Underline"
-msgstr "زیرخط"
+msgstr "Aláhúzott"
 
 #: src/annotations.js:438
 msgid "Squiggly"
-msgstr "موج‌گون"
+msgstr "Hullámos"
 
 #: src/annotations.js:439
 msgid "Strikethrough"
-msgstr "خط‌درمیان"
+msgstr "Áthúzott"
 
 #: src/annotations.js:440
 msgid "Yellow"
-msgstr "زرد"
+msgstr "Citromsárga"
 
 #: src/annotations.js:441
 msgid "Orange"
-msgstr "نارنجی"
+msgstr "Narancssárga"
 
 #: src/annotations.js:442
 msgid "Red"
-msgstr "قرمز"
+msgstr "Piros"
 
 #: src/annotations.js:443
 msgid "Magenta"
-msgstr "ارغوانی"
+msgstr "Bíbor"
 
 #: src/annotations.js:444
 msgid "Aqua"
-msgstr "سبزآبی"
+msgstr "Világoskék"
 
 #: src/annotations.js:445
 msgid "Lime"
-msgstr "سبزفسفری"
+msgstr "Világoszöld"
 
 #: src/annotations.js:446
 msgid "Custom Color…"
-msgstr "رنگ سفارشی…"
+msgstr "Egyéni szín..."
 
 #: src/annotations.js:498
 msgid "Custom"
-msgstr "سفارشی"
+msgstr "Egyéni téma"
 
 #: src/annotations.js:592
 msgid "JSON Files"
-msgstr "سندهای JSON"
+msgstr "JSON fájlok"
 
 #: src/annotations.js:597 src/app.js:149
 msgid "All Files"
-msgstr "همهٔ سندها"
+msgstr "Összes fájl"
 
 #: src/annotations.js:606 src/annotations.js:634 src/ui/book-viewer.ui:402
 msgid "No Annotations"
-msgstr "بدون یادداشت"
+msgstr "Nincsenek feljegyzések"
 
 #: src/annotations.js:607
 msgid "The imported file has no annotations"
-msgstr "سند درون‌ریزی‌ شده بدون حاشیه است"
+msgstr "Az importált fájl nem tartalmaz feljegyzéseket"
 
 #: src/annotations.js:625
 msgid "Cannot Import Annotations"
-msgstr "عدم امکان درون‌ریزی یادداشت‌ها"
+msgstr "A feljegyzések importálása sikertelen"
 
 #: src/annotations.js:626 src/book-viewer.js:716 src/library.js:644
 msgid "An error occurred"
-msgstr "خطایی رخ داد"
+msgstr "Hiba történt"
 
 #: src/annotations.js:635
 msgid "You don’t have any annotations for this book"
-msgstr "شما هیچ یادداشتی بر این کتاب ننوشته‌اید"
+msgstr "Ehhez a könyvhöz nem tartoznak feljegyzések"
 
 #: src/annotations.js:648
 #, javascript-format
 msgid "Annotations for “%s”"
-msgstr "یادداشت‌های “%s”"
+msgstr "Feljegyzések a “%s” "
 
 #: src/annotations.js:649
 #, javascript-format
 msgid "%d Annotation"
 msgid_plural "%d Annotations"
-msgstr[0] "%d یادداشت"
-msgstr[1] "%d یادداشت"
+msgstr[0] "Feljegyzés"
+msgstr[1] "Feljegyzések"
 
 #: src/app.js:95 src/book-viewer.js:30
 msgid "Close"
-msgstr "بستن"
+msgstr "Bezárás"
 
 #: src/app.js:112 src/library.js:50 src/ui/export-dialog.ui:11
 #: src/ui/import-dialog.ui:15
 msgid "Cancel"
-msgstr "لغو"
+msgstr "Mégse"
 
 #: src/app.js:136
 msgid "E-Book Files"
-msgstr "سندهای رایاکتاب"
+msgstr "E-Book fájlok"
 
 #: src/app.js:399 data/com.github.johnfactotum.Foliate.desktop.in:6
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:7
 msgid "Read e-books in style"
-msgstr "خوانش رایاکتاب در سبک"
+msgstr "Olvasson e-könyveket stílusosan"
 
 #. Translators: put your names here, one name per line
 #. they will be shown in the "About" dialog
 #: src/app.js:405
 msgid "translator-credits"
-msgstr "میثم پورگنجی"
+msgstr "Ádám Szabó"
 
 #: src/app.js:414
 msgid "Source Code"
-msgstr "منبع کد"
+msgstr "Forráskód"
 
 #: src/book-info.js:133 src/library.js:75
 msgid "Publisher"
-msgstr "ناشر"
+msgstr "Kiadó"
 
 #. Translators: this is the heading for the publication date
 #: src/book-info.js:135 src/library.js:76
 msgid "Published"
-msgstr "انتشار"
+msgstr "Kiadás dátuma"
 
 #. Translators: this is the heading for the modified date
 #: src/book-info.js:137
 msgid "Updated"
-msgstr "بروزرسانی"
+msgstr "Frissítés dátuma"
 
 #: src/book-info.js:138 src/library.js:77
 msgid "Language"
-msgstr "زبان"
+msgstr "Nyelv"
 
 #: src/book-info.js:139
 msgid "Translated by"
-msgstr "بازگردانی به دست"
+msgstr "Fordította"
 
 #: src/book-info.js:140
 msgid "Edited by"
-msgstr "ویراسته به دشت"
+msgstr "Szerkesztő"
 
 #: src/book-info.js:141
 msgid "Narrated by"
-msgstr "روایت شده به دست"
+msgstr "Narrátor"
 
 #: src/book-info.js:142
 msgid "Illustrated by"
-msgstr "تصویرسازی شده به دست"
+msgstr "Illusztrálta"
 
 #: src/book-info.js:143
 msgid "Produced by"
-msgstr "تولید شده به دست"
+msgstr "Készítette"
 
 #: src/book-info.js:144
 msgid "Artwork by"
-msgstr "کار هنری به دست"
+msgstr "Grafikus:"
 
 #: src/book-info.js:145
 msgid "Color by"
-msgstr "رنگ به دست"
+msgstr "Színezte"
 
 #: src/book-info.js:146
 msgid "Contributors"
-msgstr "مشارکت‌کنندگان"
+msgstr "Közreműködők:"
 
 #: src/book-info.js:147 src/library.js:78 src/ui/navbar.ui:283
 msgid "Identifier"
-msgstr "شناسه"
+msgstr "Azonosító"
 
 #: src/book-info.js:179 src/ui/book-item.ui:15 src/ui/book-row.ui:15
 #: src/ui/book-viewer.ui:368
 msgid "About This Book"
-msgstr "دربارهٔ این کتاب"
+msgstr "Könyvismertető"
 
 #: src/book-viewer.js:27
 #, javascript-format
 msgid "Loc. %s of %s"
-msgstr "محل %s of %s"
+msgstr "Poz. %s ból/ből %s"
 
 #: src/book-viewer.js:28
 #, javascript-format
 msgid "Page %s of %s"
-msgstr "صفحهٔ %s از %s"
+msgstr "Oldal %s ból/ből %s"
 
 #: src/book-viewer.js:29
 #, javascript-format
 msgid "Page %s"
-msgstr "صفحهٔ %s"
+msgstr "Oldal %s"
 
 #: src/book-viewer.js:32
 msgid "Footnote"
-msgstr "پانوشت"
+msgstr "Lábjegyzet"
 
 #: src/book-viewer.js:33
 msgid "Go to Footnote"
-msgstr "رفتن به پانوشت"
+msgstr "Ugrás a lábjegyzetre"
 
 #: src/book-viewer.js:34
 msgid "Endnote"
-msgstr "ته‌نویس"
+msgstr "Végjegyzet"
 
 #: src/book-viewer.js:35
 msgid "Go to Endnote"
-msgstr "رفتن به ته‌نویس"
+msgstr "Ugrás a végjegyzetre"
 
 #: src/book-viewer.js:36
 msgid "Note"
-msgstr "نکته"
+msgstr "Megjegyzés"
 
 #: src/book-viewer.js:37
 msgid "Go to Note"
-msgstr "رفتن به نکته"
+msgstr "Ugrás a megjegyzésre"
 
 #: src/book-viewer.js:38
 msgid "Definition"
-msgstr "تعریف"
+msgstr "Definíció"
 
 #: src/book-viewer.js:39
 msgid "Go to Definition"
-msgstr "رفتن به تعریف"
+msgstr "Ugrás a definícióra"
 
 #: src/book-viewer.js:40
 msgid "Bibliography"
-msgstr "کتاب‌شناسی"
+msgstr "Forrásjegyzék"
 
 #: src/book-viewer.js:41
 msgid "Go to Bibliography"
-msgstr "رفتن به کتاب‌شناسی"
+msgstr "Ugrás a forrásjegyzékre"
 
 #: src/book-viewer.js:622
 msgid "Remove bookmark"
-msgstr "برداشتن نشانک"
+msgstr "Könyvjelző eltávolítása"
 
 #: src/book-viewer.js:623
 msgid "Add bookmark"
-msgstr "افزودن نشانک"
+msgstr "Könyvjelző hozzáadása"
 
 #: src/book-viewer.js:714
 msgid "File not found"
-msgstr "سند یافت نشد"
+msgstr "A fájl nem található"
 
 #: src/book-viewer.js:715
 msgid "File type not supported"
-msgstr "نوع سند پشتیبانی نمی‌شود"
+msgstr "Ez a fájltípus nem támogatott"
 
 #: src/book-viewer.js:804
 msgid "Annotation deleted"
-msgstr "یادداشت حذف شد"
+msgstr "Feljegyzés törölve"
 
 #: src/book-viewer.js:877
 #, javascript-format
@@ -279,8 +279,6 @@ msgid ""
 "‘%s’\n"
 "—%s, “%s”, p. %s"
 msgstr ""
-"‘%s’\n"
-"—%s, “%s”، ص. %s"
 
 #: src/book-viewer.js:879
 #, javascript-format
@@ -288,13 +286,11 @@ msgid ""
 "‘%s’\n"
 "—“%s”, p. %s"
 msgstr ""
-"‘%s’\n"
-"—“%s”، ص. %s"
 
 #: src/book-viewer.js:880
 #, javascript-format
 msgid "‘%s’ (p. %s)"
-msgstr "‘%s’ (ص. %s)"
+msgstr "‘%s’ (p. %s)"
 
 #: src/book-viewer.js:883
 #, javascript-format
@@ -302,8 +298,6 @@ msgid ""
 "‘%s’\n"
 "—%s, “%s”"
 msgstr ""
-"«%s»\n"
-"— %s، «%s»"
 
 #: src/book-viewer.js:885
 #, javascript-format
@@ -311,136 +305,132 @@ msgid ""
 "‘%s’\n"
 "—“%s”"
 msgstr ""
-"«%s»\n"
-"— «%s»"
 
 #: src/book-viewer.js:886
 #, javascript-format
 msgid "‘%s’"
-msgstr "«%s»"
+msgstr "‘%s’"
 
 #: src/book-viewer.js:904
 #, javascript-format
 msgid "Image from “%s”"
-msgstr "تصویر از “%s”"
+msgstr "Kép a ból/ből “%s”"
 
 #: src/book-viewer.js:904
 msgid "Image"
-msgstr "تصویر"
+msgstr "Kép"
 
 #: src/format.js:127
 #, javascript-format
 msgid "of %d"
-msgstr "از %d"
+msgstr "nak/nek %d"
 
 #: src/library.js:47
 msgid "Loading"
-msgstr ""
+msgstr "Betöltés"
 
 #: src/library.js:48
-#, fuzzy
 msgid "Failed to Load"
-msgstr "در کلیپ‌بورد کپی شد"
+msgstr "A betöltés sikertelen"
 
 #: src/library.js:49 src/ui/book-viewer.ui:15
 msgid "Reload"
-msgstr "بارکردن مجدد"
+msgstr "Újratöltés"
 
 #: src/library.js:51
 msgid "See All"
-msgstr ""
+msgstr "Összes mgtekintése"
 
 #: src/library.js:52 src/ui/library.ui:124 src/ui/library.ui:182
 msgid "Search"
-msgstr "جست‌وجو"
+msgstr "Keresés"
 
 #: src/library.js:53
 msgid "Filter"
-msgstr ""
+msgstr "Szűrő"
 
 #: src/library.js:55 src/library.js:57
 msgid "Download"
-msgstr ""
+msgstr "Letöltés"
 
 #: src/library.js:56
 msgid "Buy"
-msgstr ""
+msgstr "Vásárlás"
 
 #: src/library.js:58
-#, fuzzy
 msgid "Preview"
-msgstr "قبلی"
+msgstr "Előnézet"
 
 #: src/library.js:59
 msgid "Sample"
-msgstr ""
+msgstr "Minta"
 
 #: src/library.js:60
 msgid "Borrow"
-msgstr ""
+msgstr "Kölcsönzés"
 
 #: src/library.js:61
 msgid "Subscribe"
-msgstr ""
+msgstr "Előfizetés"
 
 #: src/library.js:63
 msgid "Free"
-msgstr ""
+msgstr "Ingyenes"
 
 #: src/library.js:65
 msgid "First"
-msgstr ""
+msgstr "Első"
 
 #: src/library.js:66 src/ui/navbar.ui:8 src/ui/tts-box.ui:115
 msgid "Previous"
-msgstr "قبلی"
+msgstr "Előző"
 
 #: src/library.js:67 src/ui/navbar.ui:124 src/ui/tts-box.ui:132
 msgid "Next"
-msgstr "بعدی"
+msgstr "Következő"
 
 #: src/library.js:68
 msgid "Last"
-msgstr ""
+msgstr "Utolsó"
 
 #: src/library.js:70
-#, fuzzy
 msgid "Search Terms"
-msgstr "جست‌وجو"
+msgstr "Keresőkifejezés"
 
 #: src/library.js:72
 msgid "Title"
-msgstr ""
+msgstr "Cím"
 
 #: src/library.js:73
 msgid "Author"
-msgstr ""
+msgstr "Szerző"
 
 #: src/library.js:74
-#, fuzzy
 msgid "Contributor"
-msgstr "مشارکت‌کنندگان"
+msgstr "Közreműködő"
 
 #: src/library.js:438
 msgid "Remove Book?"
-msgstr "حذف کتاب؟"
+msgstr "Eltávolítja a könyvet?"
 
 #: src/library.js:439
 msgid "Reading progress, annotations, and bookmarks will be permanently lost"
-msgstr "پیشرفت خواندن، یادداشت‌ها و نشانک‌ها برای همیشه از دست خواهند رفت"
+msgstr ""
+"Az aktuális olvasási pozíció, a feljegyzések és a könyvjelzők végérvényesen "
+"elvesznek"
 
 #: src/library.js:441
 msgid "_Cancel"
-msgstr "_لغو"
+msgstr "_Mégse"
 
 #: src/library.js:442
 msgid "_Remove"
-msgstr "_برداشتن"
+msgstr "_Eltávolítás"
 
 #: src/library.js:472
 #, fuzzy
 msgid "Failed to Open"
-msgstr "در کلیپ‌بورد کپی شد"
+msgstr "A betöltés sikertelen"
 
 #: src/library.js:473
 msgid "Could not open the file with the selected application"
@@ -448,93 +438,91 @@ msgstr ""
 
 #: src/library.js:644
 msgid "Download Failed"
-msgstr ""
+msgstr "A letöltés sikertelen"
 
 #: src/library.js:698
 msgid "Rename…"
-msgstr ""
+msgstr "Átnevezés..."
 
 #: src/library.js:699 src/ui/book-item.ui:25 src/ui/book-row.ui:25
 msgid "Remove"
-msgstr "حذف"
+msgstr "Eltávolítás"
 
 #: src/library.js:719 src/library.js:720
 msgid "Rename"
-msgstr ""
+msgstr "Átnevezés"
 
 #: src/library.js:725
 msgid "Name"
-msgstr ""
+msgstr "Név"
 
 #: src/library.js:740
-#, fuzzy
 msgid "All Books"
-msgstr "کتاب"
+msgstr "Minden könyv"
 
 #: src/library.js:746
-#, fuzzy
 msgid "Add Catalog…"
-msgstr "افزودن حاشیه…"
+msgstr "Katalóus hozzáadása..."
 
 #: src/library.js:813 src/ui/book-viewer.ui:130 src/ui/book-viewer.ui:239
 #: src/ui/library.ui:93
 msgid "Library"
-msgstr "کتابخانه"
+msgstr "Könyvtár"
 
 #: src/library.js:821
 msgid "Catalogs"
-msgstr ""
+msgstr "Katalógusok"
 
 #: src/library.js:864
 msgid "Catalog removed"
-msgstr ""
+msgstr "Katalógus törölve"
 
 #: src/library.js:951 src/library.js:956
 msgid "Add Catalog"
-msgstr ""
+msgstr "Katalógus hozzáadása"
 
 #: src/library.js:952
 msgid "Add"
-msgstr ""
+msgstr "Hozzáad"
 
 #: src/library.js:957
 msgid ""
 "You can browse and download books from OPDS catalogs. <a href=\"https://opds."
 "io\">Learn More…</a>"
 msgstr ""
+"Böngészhet és letölthet könyveket nyilvános (OPDS) katalógusokból. <a "
+"href=\"https://opds. io\">További információ...</a>"
 
 #: src/library.js:961
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #. Translators: Do NOT translate! The is the application name!
 #: src/main.js:28 data/com.github.johnfactotum.Foliate.desktop.in:4
 msgid "Foliate"
-msgstr "برگه"
+msgstr "Foliate"
 
 #: src/selection-tools.js:33
 msgid "Dictionary"
-msgstr "واژه‌نامه"
+msgstr "Szótár"
 
 #: src/selection-tools.js:37
 msgid ""
 "From <a id=\"link\">Wiktionary</a>, released under the <a href=\"https://"
 "creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA License</a>."
 msgstr ""
-"از <a id=\"link\">ویکی‌واژه</a>، انتشاریافته تحت <a href=\"https://"
-"creativecommons.org/licenses/by-sa/4.0/\">CC BY-SA مجوز</a>."
 
 #: src/selection-tools.js:38 src/selection-tools.js:51
 msgid "No Definitions Found"
-msgstr "تعریفی یافت نشد"
+msgstr "Nem található definíció"
 
 #: src/selection-tools.js:39
 msgid "Search on Wiktionary"
-msgstr "جست‌وجو در ویکی‌واژه"
+msgstr "Keresés a Wikiszótárban"
 
 #: src/selection-tools.js:46
 msgid "Wikipedia"
-msgstr "ویکی‌پدیا"
+msgstr "Wikipédia"
 
 #: src/selection-tools.js:50
 msgid ""
@@ -542,101 +530,99 @@ msgid ""
 "wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-"
 "ShareAlike_4.0_International_License\">CC BY-SA License</a>."
 msgstr ""
-"از <a id=\"link\">ویکی‌پدیا</a>، انتشاریافته تحت <a href=\"https://en."
-"wikipedia.org/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-"
-"ShareAlike_4.0_International_License\">CC BY-SA مجوز</a>."
 
 #: src/selection-tools.js:52
 msgid "Search on Wikipedia"
-msgstr "جست‌وجو در ویکی‌پدیا"
+msgstr "Keresés a Wikipédián"
 
 #: src/selection-tools.js:59
 msgid "Translate"
-msgstr "ترجمه"
+msgstr "Fordítás"
 
 #: src/selection-tools.js:65
 msgid "Translation by Google Translate"
-msgstr "ترجمه با مترجم گوگل"
+msgstr "Fordítás a Google Fordítóval"
 
 #: src/selection-tools.js:66
 msgid "Cannot retrieve translation"
-msgstr "ناتوانی در گرفتن ترجمه"
+msgstr "A fordítás sikertelen"
 
 #: src/selection-tools.js:67
 #, fuzzy
 msgid "Search…"
-msgstr "جست‌وجو"
+msgstr "Keresés"
 
 #: src/themes.js:8
 msgid "Default"
-msgstr "پیش‌گزیده"
+msgstr "Alapértelmezett"
 
 #: src/themes.js:13
 msgid "Gray"
-msgstr "خاکستری"
+msgstr "Szürke"
 
 #: src/themes.js:18
 msgid "Sepia"
-msgstr "قرمزقهوه‌ای"
+msgstr "Szépia"
 
 #: src/themes.js:23
 msgid "Grass"
-msgstr "چمنی"
+msgstr "Fűzöld"
 
 #: src/themes.js:28
 msgid "Cherry"
-msgstr "گیلاسی"
+msgstr "Cseresznyepiros"
 
 #: src/themes.js:33
 msgid "Sky"
-msgstr "آسمانی"
+msgstr "Égkék"
 
 #: src/themes.js:38
 msgid "Solarized"
-msgstr "آقتاب‌زده"
+msgstr "Szolarizált"
 
 #: src/themes.js:43
 msgid "Gruvbox"
-msgstr "معدن"
+msgstr "Gruvbox"
 
 #: src/themes.js:48
 msgid "Nord"
-msgstr "نورد"
+msgstr "Észak"
 
 #: src/tts.js:117
 msgid "Text-to-Speech Error"
-msgstr "خطای گفتاربه‌متن"
+msgstr "Hiba a felolvasáskor"
 
 #: src/tts.js:118
 msgid "Make sure Speech Dispatcher is installed and working on your system"
 msgstr ""
-"اطمینان حاصل کنید که Speech Dispatcher بر روی سیستم شما نصب است و کار می‌کند"
+"Győződjön meg róla, hogy a beszédmotor telepítésre került-e és, hogy működik-"
+"e az Ön rendszerén"
 
 #: src/utils.js:168
 msgid "Copied to clipboard"
-msgstr "در کلیپ‌بورد کپی شد"
+msgstr "Vágólapra másolva"
 
 #: src/ui/annotation-popover.ui:13
 msgid "Highlight Style"
-msgstr "سبک پررنگ‌سازی"
+msgstr "Kiemelés stílusa"
 
 #: src/ui/annotation-popover.ui:20 src/ui/annotation-row.ui:63
 #: src/ui/bookmark-row.ui:33
 msgid "Delete"
-msgstr "حذف"
+msgstr "Törlés"
 
 #: src/ui/annotation-popover.ui:28 src/ui/book-item.ui:65 src/ui/book-row.ui:79
 #: src/ui/image-viewer.ui:62
 msgid "Menu"
-msgstr "فهرست"
+msgstr "Menü"
 
 #: src/ui/annotation-popover.ui:47
 msgid "Add Note…"
-msgstr "افزودن حاشیه…"
+msgstr "Megjegyzés hozzáadása..."
 
 #: src/ui/book-item.ui:5 src/ui/book-row.ui:5
 msgid "Open in New Window"
-msgstr "گشودن در پنجرهٔ جدید"
+msgstr "Megnyitás új ablakban"
 
 #: src/ui/book-item.ui:9 src/ui/book-row.ui:9
 msgid "Open with External App"
@@ -644,185 +630,185 @@ msgstr ""
 
 #: src/ui/book-item.ui:19 src/ui/book-row.ui:19 src/ui/book-viewer.ui:25
 msgid "Export Annotations…"
-msgstr "برون‌ریزی یادداشت‌ها…"
+msgstr "Feljegyzések exportálása..."
 
 #: src/ui/book-viewer.ui:5
 msgid "New Window"
-msgstr "پنجرهٔ جدید"
+msgstr "Új ablak"
 
 #: src/ui/book-viewer.ui:11
 msgid "Open a Copy"
-msgstr "گشودن یک رونوشت"
+msgstr "Másodpéldány megnyitása"
 
 #: src/ui/book-viewer.ui:21
 msgid "Import Annotations…"
-msgstr "درون‌ریزی یادداشت‌ها…"
+msgstr "Feljegyzések importálása..."
 
 #: src/ui/book-viewer.ui:37 src/ui/library.ui:42
 msgid "About Foliate"
-msgstr "دربارهٔ برگه"
+msgstr "Névjegy"
 
 #: src/ui/book-viewer.ui:45
 msgid "All Sections"
-msgstr "همهٔ بخش‌ها"
+msgstr "Összes szakasz"
 
 #: src/ui/book-viewer.ui:50
 msgid "Current Section"
-msgstr "بخش حاضر"
+msgstr "Aktuális szakasz"
 
 #: src/ui/book-viewer.ui:57
 msgid "Match Whole Words Only"
-msgstr "فقط تطابق کامل کلمات"
+msgstr "Csak teljes szavas egyezés"
 
 #: src/ui/book-viewer.ui:61
 msgid "Match Case"
-msgstr "تطابق شکل"
+msgstr "Kis - és nagybetűk egyezzenek"
 
 #: src/ui/book-viewer.ui:65
 msgid "Match Diacritics"
-msgstr "تطابق اعراب‌گذاری"
+msgstr "Diakrtikus jelek egyezzenek"
 
 #: src/ui/book-viewer.ui:83
 msgid "Font & Layout Settings"
-msgstr "تنظیمات قلم و چیدمان"
+msgstr "Betűtípus és elrendezés"
 
 #: src/ui/book-viewer.ui:89
 msgid "Scrolled Mode"
-msgstr "حالت پیوسته"
+msgstr "Folyamatos görgetés"
 
 #: src/ui/book-viewer.ui:93
 msgid "Invert Colors in Dark Mode"
-msgstr "برعکس کردن رنگ‌ها در حالت تاریک"
+msgstr "Színek invertálása sötét módban"
 
 #: src/ui/book-viewer.ui:97
 msgid "Autohide Cursor"
-msgstr "خودپنهانی مکان‌نما"
+msgstr "Kurzor automatikus elrejtése"
 
 #: src/ui/book-viewer.ui:103
 msgid "Print…"
-msgstr "چاپ…"
+msgstr "Nyomtatás..."
 
 #: src/ui/book-viewer.ui:107
 msgid "Inspector"
-msgstr "بازرس"
+msgstr "Fejlesztői üzemmód"
 
 #: src/ui/book-viewer.ui:167
 msgid "Book Cannot Be Opened"
-msgstr "کتاب گشوده نمی‌شود"
+msgstr "A könyv megnyitása sikertelen"
 
 #: src/ui/book-viewer.ui:177
 msgid "Details"
-msgstr "جزییات"
+msgstr "Részletek"
 
 #: src/ui/book-viewer.ui:193
 msgid "Open Another File…"
-msgstr "گشودن سندی دیگر…"
+msgstr "Másik fájl megnyitása..."
 
 #: src/ui/book-viewer.ui:245
 msgid "Pin Sidebar"
-msgstr "سنجاق کردن نوار کناری"
+msgstr "Kitűzés az oldalsávra"
 
 #: src/ui/book-viewer.ui:253
 msgid "Book Menu"
-msgstr "فهرست کتاب"
+msgstr "Műveleti menü"
 
 #: src/ui/book-viewer.ui:260 src/ui/selection-popover.ui:17
 msgid "Find"
-msgstr "جست‌وجو"
+msgstr "Keresés"
 
 #: src/ui/book-viewer.ui:276
 msgid "Find in book…"
-msgstr "جست‌وجو در کتاب…"
+msgstr "Keresés a könyvben"
 
 #: src/ui/book-viewer.ui:313
 msgid "Contents"
-msgstr "محتوا"
+msgstr "Tartalomjegyzék"
 
 #: src/ui/book-viewer.ui:391
 msgid "Annotations"
-msgstr "یادداشت‌ها"
+msgstr "Feljegyzések"
 
 #: src/ui/book-viewer.ui:403
 msgid "Select some text to add annotations"
-msgstr "گزینش متن برای افزودن یادداشت"
+msgstr "Feljegyzések hozzáadásához jelöljön ki egy szövegrészt"
 
 #: src/ui/book-viewer.ui:433
 msgid "Filter annotations…"
-msgstr "پالودن یادداشت‌ها…"
+msgstr "Feljegyzések szűrése..."
 
 #: src/ui/book-viewer.ui:447
 msgid "Bookmarks"
-msgstr "نشانک‌ها"
+msgstr "Könyvjelzők"
 
 #: src/ui/book-viewer.ui:458
 msgid "No Bookmarks"
-msgstr "بدون نشانک"
+msgstr "Nincsenek könyvjelzők"
 
 #: src/ui/book-viewer.ui:459
 msgid "Add some bookmarks to see them here"
-msgstr "افزودن نشانک‌هایی برای دیدنشان در این‌جا"
+msgstr "Hozzon létre néhány könyvjelzőt, hogy itt megtalálhassa őket"
 
 #: src/ui/book-viewer.ui:498 src/ui/library-view.ui:42
 msgid "No Results Found"
-msgstr "نتیجه‌ای حاصل نشد"
+msgstr "Nincs találat"
 
 #: src/ui/book-viewer.ui:499 src/ui/library-view.ui:43
 msgid "Try a different search"
-msgstr "تلاش برای جست‌وجویی دیگر"
+msgstr "Próbálkozzon más keresőkifejezéssel"
 
 #: src/ui/book-viewer.ui:542 src/ui/library.ui:102 src/ui/library.ui:160
 msgid "Sidebar"
-msgstr "نوار کناری"
+msgstr "Oldalsáv"
 
 #: src/ui/book-viewer.ui:556
 msgid "View Menu"
-msgstr "دیدن فهرست"
+msgstr "Nézet"
 
 #: src/ui/book-viewer.ui:569 src/ui/image-viewer.ui:41
 msgid "Zoom Out"
-msgstr "کوچک‌نمایی"
+msgstr "Kicsinyítés"
 
 #: src/ui/book-viewer.ui:576 src/ui/image-viewer.ui:48
 msgid "Reset Zoom"
-msgstr "بازنشانی زوم"
+msgstr "Eredeti méret visszaállítása"
 
 #: src/ui/book-viewer.ui:585 src/ui/image-viewer.ui:55
 msgid "Zoom In"
-msgstr "بزرگ‌نمایی"
+msgstr "Nagyítás"
 
 #: src/ui/book-viewer.ui:601
 msgid "Follow System Style"
-msgstr "طبعیت از سبک سیستم"
+msgstr "Rendszertéma használata"
 
 #: src/ui/book-viewer.ui:611
 msgid "Light Style"
-msgstr "سبک روشن"
+msgstr "Világos mód"
 
 #: src/ui/book-viewer.ui:621
 msgid "Dark Style"
-msgstr "سبک تاریک"
+msgstr "Sötét mód"
 
 #: src/ui/book-viewer.ui:636 src/ui/library.ui:26
 msgid "Fullscreen"
-msgstr "تمام‌صفحه"
+msgstr "Teljes képernyő"
 
 #: src/ui/export-dialog.ui:5
 msgid "Export Annotations"
-msgstr "برون‌ریزی یادداشت‌ها"
+msgstr "Feljegyzések exportálása"
 
 #: src/ui/export-dialog.ui:16
 msgid "Export"
-msgstr "برون‌ریزی"
+msgstr "Exportálás"
 
 #: src/ui/export-dialog.ui:28
 msgid "Format"
-msgstr "قالب"
+msgstr "Formátum"
 
 #: src/ui/export-dialog.ui:29
 msgid "Choose “JSON” if you plan on importing annotations back to Foliate"
 msgstr ""
-"اگر می‌خواهید یادداشت‌ها را در برگه درون‌ریزی کنید، گزینهٔ \"JSON\" را انتخاب "
-"کنید"
+"Válassza a “JSON” opciót, ha a későbbiekben szeretné visszaimportálni a "
+"feljegyzéseket a programba"
 
 #: src/ui/export-dialog.ui:33
 msgid "JSON"
@@ -834,287 +820,290 @@ msgstr "HTML"
 
 #: src/ui/export-dialog.ui:35
 msgid "Markdown"
-msgstr "مارک‌دون"
+msgstr "Markdown"
 
 #: src/ui/export-dialog.ui:36
 msgid "Org Mode"
-msgstr "حالت Org"
+msgstr "Org Mode"
 
 #: src/ui/image-viewer.ui:6 src/ui/navbar.ui:302 src/ui/selection-popover.ui:7
 msgid "Copy"
-msgstr "رونوشت"
+msgstr "Másolás"
 
 #: src/ui/image-viewer.ui:10
 msgid "Save As…"
-msgstr "ذخیره به عنوان…"
+msgstr "Mentés másként..."
 
 #: src/ui/image-viewer.ui:25
 msgid "Rotate 90° Counter-Clockwise"
-msgstr "چرخش ۹۰ درجه پادساعت‌گرد"
+msgstr "Elforgatás 90°-kal az óramutató járásával ellentétesen"
 
 #: src/ui/image-viewer.ui:32
 msgid "Rotate 90° Clockwise"
-msgstr "چرخش ۹۰ درجه ساعت‌گرد"
+msgstr "Elforgatás 90°-kal az óramutató járásával megegyezően"
 
 #: src/ui/import-dialog.ui:7
 msgid "Import Annotations"
-msgstr "درون‌ریزی یادداشت‌ها"
+msgstr "Feljegyzések importálása"
 
 #: src/ui/import-dialog.ui:21
 msgid "Import"
-msgstr "درون‌ریزی"
+msgstr "Importálás"
 
 #: src/ui/import-dialog.ui:33
 msgid ""
 "The identifier doesn’t match. These annotations may not be for this book."
-msgstr "شناسه یافت نشد. شاید یادداشت‌ها برای این کتاب نیستند."
+msgstr ""
+"Az azonosító nem egyezik. A feljegyzések feltehetően nem ehhez a könyvhöz "
+"tartoznak."
 
 #: src/ui/import-dialog.ui:34
 msgid "Import Anyway"
-msgstr "درون‌ریزی در هر حال"
+msgstr "Importálás mindenképpen"
 
 #: src/ui/library.ui:6
 msgid "List View"
-msgstr "نمایش لیست‌وار"
+msgstr "Listanézet"
 
 #: src/ui/library.ui:11
 msgid "Grid View"
-msgstr "نمایش شبکه‌ای"
+msgstr "Rácsnézet"
 
 #: src/ui/library.ui:20 src/ui/library-view.ui:27
 msgid "Open…"
-msgstr "گشودن…"
+msgstr "Megnyitás..."
 
 #: src/ui/library.ui:67
 msgid "Main Menu"
-msgstr "فهرست اصلی"
+msgstr "Főmenü"
 
 #: src/ui/library.ui:110
-#, fuzzy
 msgid "Open"
-msgstr "گشودن…"
+msgstr "Megnyitás"
 
 #: src/ui/library.ui:117
-#, fuzzy
 msgid "Library Menu"
-msgstr "کتابخانه"
+msgstr "Könyvtár menü"
 
 #: src/ui/library.ui:134
 msgid "Search library…"
-msgstr "جست‌وجوی کتابخانه…"
+msgstr "Keresés a könyvtárban...."
 
 #: src/ui/library.ui:168 src/ui/navbar.ui:22
 msgid "Back"
-msgstr "برگشت"
+msgstr "Vissza"
 
 #: src/ui/library.ui:175 src/ui/navbar.ui:36
 msgid "Forward"
-msgstr "پسین"
+msgstr "Előre"
 
 #: src/ui/library-view.ui:21
 msgid "No Books Yet"
-msgstr "هنوز بدون کتاب"
+msgstr "Még nem adott hozzá könyvet a könyvtárhoz"
 
 #: src/ui/library-view.ui:22
 msgid "Open a book to start reading"
-msgstr "کتابی را برای آغاز مطالعه باز کنید"
+msgstr "Nyisson meg egy könyvet az olvasáshoz"
 
 #: src/ui/navbar.ui:62 src/ui/navbar.ui:253
 msgid "Location"
-msgstr "مکان"
+msgstr "Pozíció"
 
 #: src/ui/navbar.ui:91
 msgid "Narration"
-msgstr "روایت"
+msgstr "Felolvasás"
 
 #: src/ui/navbar.ui:162
 msgid "Time Left in Section"
-msgstr "زمان مانده از بخش"
+msgstr "A fejezetből hátralévő idő"
 
 #: src/ui/navbar.ui:192
 msgid "Time Left in Book"
-msgstr "زمان مانده از کتاب"
+msgstr "A könyből hátralévő idő"
 
 #: src/ui/navbar.ui:226 src/ui/view-preferences-window.ui:159
 msgid "Page"
-msgstr "صفحه"
+msgstr "Oldal"
 
 #: src/ui/navbar.ui:309
 msgid "Paste and Go"
-msgstr "بچسبان و برو"
+msgstr "Beillesztés és ugrás"
 
 #: src/ui/navbar.ui:322
 msgid "Section"
-msgstr "بخش"
+msgstr "Szakasz"
 
 #: src/ui/navbar.ui:388
 msgid "First Section"
-msgstr "بخش اول"
+msgstr "Első szakasz"
 
 #: src/ui/navbar.ui:397
 msgid "Previous Section"
-msgstr "بخش قبلی"
+msgstr "Előző szakasz"
 
 #: src/ui/navbar.ui:405
 msgid "Jump To…"
-msgstr "جهش به…"
+msgstr "Ugrás ide..."
 
 #: src/ui/navbar.ui:414
 msgid "Next Section"
-msgstr "بخش بعدی"
+msgstr "Következő szakasz"
 
 #: src/ui/navbar.ui:423
 msgid "Last Section"
-msgstr "بخش آخر"
+msgstr "Utolsó szakasz"
 
 #: src/ui/selection-popover.ui:12
 msgid "Highlight"
-msgstr "پررنگ‌سازی"
+msgstr "Kiemelés"
 
 #: src/ui/selection-popover.ui:30
 msgid "Speak from Here"
-msgstr "از اینجا بخوان"
+msgstr "Felolvasás innentől"
 
 #: src/ui/selection-popover.ui:36
 msgid "Copy with Citation"
-msgstr "رونوشت با استناد"
+msgstr "Másolás idézőjelekben"
 
 #: src/ui/selection-popover.ui:40
 msgid "Copy Identifier"
-msgstr "رونوشت شناسه"
+msgstr "Azonosító másolása"
 
 #: src/ui/selection-popover.ui:44
 msgid "Print Selection…"
-msgstr "چاپ انتخاب‌شده…"
+msgstr "Kijelölés nyomtatása..."
 
 #: src/ui/tts-box.ui:34
 msgid "Speed"
-msgstr "سرعت"
+msgstr "Sebesség"
 
 #: src/ui/tts-box.ui:67
 msgid "Pitch"
-msgstr "گام"
+msgstr "Hangmagasság"
 
 #: src/ui/tts-box.ui:123
 msgid "Play/Pause"
-msgstr "پخش/وقفه"
+msgstr "Lejátszás/Szünet"
 
 #: src/ui/tts-box.ui:141
 msgid "Stop"
-msgstr "توقف"
+msgstr "Leállítás"
 
 #: src/ui/view-preferences-window.ui:5
 msgid "Font"
-msgstr "قلم"
+msgstr "Betűtípus"
 
 #: src/ui/view-preferences-window.ui:9
 msgid "Font Size"
-msgstr "اندازهٔ قلم"
+msgstr "Betűméret"
 
 #: src/ui/view-preferences-window.ui:12
 msgid "Default Font Size"
-msgstr "اندازهٔ پیش‌فرض قلم"
+msgstr "Alapértelmezett betűméret"
 
 #: src/ui/view-preferences-window.ui:25
 msgid "Minimum Font Size"
-msgstr "کمترین اندازهٔ قلم"
+msgstr "Minimális betűméret"
 
 #: src/ui/view-preferences-window.ui:40
 msgid "Font Family"
-msgstr "دستهٔ قلم‌ها"
+msgstr "Betűtípus család"
 
 #: src/ui/view-preferences-window.ui:43
 msgid "Default Font"
-msgstr "قلم پیش‌فرض"
+msgstr "Alapértelmezett betűtípus"
 
 #: src/ui/view-preferences-window.ui:47
 msgid "Serif"
-msgstr "سرکش‌دار"
+msgstr "Talpas"
 
 #: src/ui/view-preferences-window.ui:48
 msgid "Sans-serif"
-msgstr "بی‌سرکش"
+msgstr "Talpatlan"
 
 #: src/ui/view-preferences-window.ui:56
 msgid "Override Publisher Font"
-msgstr ""
+msgstr "A beépített betűtípus felülírása"
 
 #: src/ui/view-preferences-window.ui:71
 msgid "Serif Font"
-msgstr "قلم سرکش‌دار"
+msgstr "Talpas betűtípuscsalád"
 
 #: src/ui/view-preferences-window.ui:84
 msgid "Sans-Serif Font"
-msgstr "قلم بی‌سرکش"
+msgstr "Talpatlan betűtípuscsalád"
 
 #: src/ui/view-preferences-window.ui:97
 msgid "Monospace Font"
-msgstr "قلم هم‌عرض"
+msgstr "Állandó szélességű betűtípuscsalád"
 
 #: src/ui/view-preferences-window.ui:114
 msgid "Layout"
-msgstr "چیدمان"
+msgstr "Elrendezés"
 
 #: src/ui/view-preferences-window.ui:118
 msgid "Paragraph"
-msgstr "بند"
+msgstr "Bekezdés"
 
 #: src/ui/view-preferences-window.ui:121
 msgid "Line Height"
-msgstr "ارتفاع خط"
+msgstr "Sormagasság"
 
 #: src/ui/view-preferences-window.ui:135
 msgid "Full Justification"
-msgstr "ترازبندی کامل"
+msgstr "Teljes sorkizárás"
 
 #: src/ui/view-preferences-window.ui:146
 msgid "Hyphenation"
-msgstr "خط تیره‌ گذاری"
+msgstr "Elválasztás"
 
 #: src/ui/view-preferences-window.ui:162
 msgid "Margins"
-msgstr "حاشیه‌ها"
+msgstr "Margók"
 
 #: src/ui/view-preferences-window.ui:176
 msgid "Maximum Number of Columns"
-msgstr "بیشینهٔ تعداد ستون‌ها"
+msgstr "Oszlopok száma összesen"
 
 #: src/ui/view-preferences-window.ui:189
 msgid "Maximum Inline Size"
-msgstr "بیشترین اندازهٔ هم‌خوان"
+msgstr "Maximális sorméret"
 
 #: src/ui/view-preferences-window.ui:190
 msgid "Maximum column width (horizontal writing) or height (vertical writing)"
-msgstr "بیشترین پهنای ستون (نوشتار افقی) یا ارتفاع (نوشتار عمودی)"
+msgstr ""
+"Maximum oszlopszélesség (vízszintes írásnál) vagy magasság (függőleges "
+"írásnál)"
 
 #: src/ui/view-preferences-window.ui:203
 msgid "Maximum Block Size"
-msgstr "بیشترین اندازهٔ بلوک"
+msgstr "Maxmimális hasábméret"
 
 #: src/ui/view-preferences-window.ui:204
 msgid "Maximum height (horizontal writing) or width (vertical writing)"
-msgstr "بیشترین ارتفاع (نوشتار افقی) یا پهنا (نوشتار عمودی)"
+msgstr ""
+"Maximális magasság (vízszintes írásnál) vagy szélesség (függőleges írásnál)"
 
 #: src/ui/view-preferences-window.ui:221
 msgid "Color"
-msgstr "رنگ"
+msgstr "Szín"
 
 #: src/ui/view-preferences-window.ui:240
 msgid "Behavior"
-msgstr ""
+msgstr "Viselkedés"
 
 #: src/ui/view-preferences-window.ui:246
 msgid "Reduce Animation"
-msgstr "پویانمایی کاسته"
+msgstr "Animáció csökkentése"
 
 #: data/com.github.johnfactotum.Foliate.desktop.in:5
 msgid "E-Book Viewer"
-msgstr "بیننده رایاکتاب"
+msgstr "E-book olvasó"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/com.github.johnfactotum.Foliate.desktop.in:14
 msgid "Ebook;Book;EPUB;Viewer;Reader;"
-msgstr "رایاکتاب;کتاب;EPUB;بیننده;خواننده;"
+msgstr "E-Book;Könyv;EPUB;Olvasó;Reader;"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:10
 msgid ""
@@ -1122,45 +1111,46 @@ msgid ""
 "tailored for GNOME. Immerse yourself in a distraction-free interface, with "
 "customization features designed to match your unique preferences."
 msgstr ""
-"فصلی جدید در خواندن با با برگه، رایاکتاب‌خوان نوین ساخته شده برای گنوم کشف "
-"کنید. با ویژگی‌های سفارشی سازی طرّاحی شده برای تطبیق با ترجیحات منحصر به "
-"فردتان، خود را در میانایی بدون حواس‌پرتی غوطه‌ور کنید."
+"Nyisson egy új fejezetet az olvasásban a Foliate segítségével, a modern e-"
+"book olvasóval,melyet a GNOME felülethez igazítottunk. Merüljön el az "
+"olvasásban egy letisztult és személyre szabható felület segítségével,amelyet "
+"úgy terveztek, hogy igazodjon az Ön egyéni igényeihez."
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:11
 msgid "Features include:"
-msgstr "ویژگی‌هایی همچون:"
+msgstr "Legfontosabb jellemzők:"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:13
 msgid "Open EPUB, Mobipocket, Kindle, FB2, CBZ, and PDF files"
-msgstr "گشودن سندهای EPUB، Mobipocket، Kindle، FB2، CBZ و PDF"
+msgstr "EPUB, Mobipocket, Kindle, FB2, CBZ és PDF formátumok megnyitása"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:14
 msgid "Paginated mode and scrolled mode"
-msgstr "حالت صفحهٔ و حالت پیوسته"
+msgstr "Oldalankénti valamint folyamatos megjelenítési mód"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:15
 msgid "Customize font and line-spacing"
-msgstr "سفارشی‌سازی قلم و فاصله‌گذاری خط"
+msgstr "Személyre szabható betű - és sorköz"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:16
 msgid "Light, sepia, dark, and invert mode"
-msgstr "روشن، قرمزقهوه‌ای، تاریک و حالت برعکس"
+msgstr "Világos, szépia, sötét és invertált megjelenítési módok"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:17
 msgid "Reading progress slider with chapter marks"
-msgstr "لغزندهٔ پیشرفت خواندن با نشانه‌های فصل"
+msgstr "Olvasási folyamatsáv, fejezetjelzőkkel"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:18
 msgid "Bookmarks and annotations"
-msgstr "نشانک‌ها و یادداشت‌ها"
+msgstr "Könyjelzők és feljegyzések"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:19
 msgid "Find in book"
-msgstr "یافتن در کتاب"
+msgstr "Keresés a könyvben"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:20
 msgid "Quick dictionary lookup"
-msgstr "جست‌وجوی سریع واژه‌نامه"
+msgstr "Gyors keresés a szótárban"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:55
 msgid "Fixed end of chapter cut off when chapter starts with page break"
@@ -1179,8 +1169,9 @@ msgid "Added support for OPDS catalogs, now with support for OPDS 2.0"
 msgstr ""
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:65
+#, fuzzy
 msgid "Added option to override publisher font"
-msgstr ""
+msgstr "A beépített betűtípus felülírása"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:66
 msgid "Added option to reduce animation"
@@ -1204,24 +1195,22 @@ msgid ""
 "and the latest platform libraries, GTK 4 and Libadwaita, with refreshed UI "
 "and improved performance."
 msgstr ""
-"برگه با یک کتابخانهٔ تفسیر رایاکتاب‌خوان و آخرین کتابخانه‌های سکو، GTK4 و "
-"Libadwaita به همراه یک رابط کاربری تازه و با کارایی بالاتر از ابتدا بازنویسی "
-"شده است."
+"A Foliate alapjaiban került újraírásra, az e-book feldolgozó motor "
+"megújításával,valamint a legfrissebb platform modulokkal (GTK 4 és "
+"Libadwita) továbbá egy felfrissített felhasználói felülettel,és jobb "
+"teljesítménnyel."
 
 #~ msgid "Book"
-#~ msgstr "کتاب"
+#~ msgstr "Könyv"
 
 #~ msgid "EPUB"
 #~ msgstr "EPUB"
 
 #~ msgid "Ebook"
-#~ msgstr "رایاکتاب"
+#~ msgstr "Ebook"
 
 #~ msgid "Reader"
-#~ msgstr "خواننده"
+#~ msgstr "Olvasó"
 
 #~ msgid "Viewer"
-#~ msgstr "بیننده"
-
-#~ msgid "Foliate is modern e-book reader app designed for GNOME."
-#~ msgstr "برگه یک ابزار رایاکتاب‌خوان طراحی‌شده برای گنوم است."
+#~ msgstr "Olvasó"

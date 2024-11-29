@@ -1,4 +1,5 @@
-<img src="data/com.github.johnfactotum.Foliate.svg" align="left">
+<img src="data/com.github.johnfactotum.Foliate.svg" align="left" style="margin-right:8px"> 
+<br><br>
 
 # Foliate
 
@@ -25,7 +26,13 @@ If installed, `tracker` (>= 3; `gir1.2-tracker-3.0` in Debian-based distros) and
 
 ### Obtaining the Source
 
-The repo uses git submodules. Before running or installing, make sure you clone the whole thing with `--recurse-submodules`.
+The repo uses git submodules. Before running or installing, make sure you clone the whole thing with `--recurse-submodules`:
+
+```
+git clone --recurse-submodules https://github.com/johnfactotum/foliate.git 
+```
+
+Or download the tarball (the `.tar.xz` file) from the [Releases](https://github.com/johnfactotum/foliate/releases) page.
 
 ### Run without Building or Installing
 

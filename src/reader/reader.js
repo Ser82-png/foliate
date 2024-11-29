@@ -1,4 +1,4 @@
-import '../foliate-js/view.js'
+import { makeBook, NotFoundError, UnsupportedTypeError } from '../foliate-js/view.js'
 import { Overlayer } from '../foliate-js/overlayer.js'
 import { FootnoteHandler } from '../foliate-js/footnotes.js'
 import { toPangoMarkup } from './markup.js'
@@ -8,22 +8,14 @@ const format = {}
 const emit = x => globalThis.webkit.messageHandlers.viewer
     .postMessage(JSON.stringify(x))
 
-const debounce = (f, wait, immediate) => {
-    let timeout
-    return (...args) => {
-        const later = () => {
-            timeout = null
-            if (!immediate) f(...args)
-        }
-        const callNow = immediate && !timeout
-        if (timeout) clearTimeout(timeout)
-        timeout = setTimeout(later, wait)
-        if (callNow) f(...args)
-    }
+const formatLanguageMap = x => {
+    if (!x) return ''
+    if (typeof x === 'string') return x
+    const keys = Object.keys(x)
+    return x[keys[0]]
 }
 
-const getSelectionRange = doc => {
-    const sel = doc.getSelection()
+const getSelectionRange = sel => {
     if (!sel.rangeCount) return
     const range = sel.getRangeAt(0)
     if (range.collapsed) return
@@ -56,90 +48,21 @@ const getHTML = async range => {
     return new XMLSerializer().serializeToString(fragment)
 }
 
-const isZip = async file => {
-    const arr = new Uint8Array(await file.slice(0, 4).arrayBuffer())
-    return arr[0] === 0x50 && arr[1] === 0x4b && arr[2] === 0x03 && arr[3] === 0x04
-}
-
-const isPDF = async file => {
-    const arr = new Uint8Array(await file.slice(0, 5).arrayBuffer())
-    return arr[0] === 0x25
-        && arr[1] === 0x50 && arr[2] === 0x44 && arr[3] === 0x46
-        && arr[4] === 0x2d
-}
-
-const makeZipLoader = async file => {
-    const { configure, ZipReader, BlobReader, TextWriter, BlobWriter } =
-        await import('../foliate-js/vendor/zip.js')
-    configure({ useWebWorkers: false })
-    const reader = new ZipReader(new BlobReader(file))
-    const entries = await reader.getEntries()
-    const map = new Map(entries.map(entry => [entry.filename, entry]))
-    const load = f => (name, ...args) =>
-        map.has(name) ? f(map.get(name), ...args) : null
-    const loadText = load(entry => entry.getData(new TextWriter()))
-    const loadBlob = load((entry, type) => entry.getData(new BlobWriter(type)))
-    const getSize = name => map.get(name)?.uncompressedSize ?? 0
-    return { entries, loadText, loadBlob, getSize }
-}
-
-const isCBZ = ({ name, type }) =>
-    type === 'application/vnd.comicbook+zip' || name.endsWith('.cbz')
-
-const isFB2 = ({ name, type }) =>
-    type === 'application/x-fictionbook+xml' || name.endsWith('.fb2')
-
-const isFBZ = ({ name, type }) =>
-    type === 'application/x-zip-compressed-fb2'
-    || name.endsWith('.fb2.zip') || name.endsWith('.fbz')
-
 const open = async file => {
-    if (!file.size) {
-        emit({ type: 'book-error', id: 'not-found' })
-        return
+    try {
+        const book = await makeBook(file)
+        const reader = new Reader(book)
+        globalThis.reader = reader
+        await reader.init()
+        emit({ type: 'book-ready', book, reader })
     }
-
-    let book
-    if (await isZip(file)) {
-        const loader = await makeZipLoader(file)
-        const { entries } = loader
-        if (isCBZ(file)) {
-            const { makeComicBook } = await import('../foliate-js/comic-book.js')
-            book = makeComicBook(loader, file)
-        } else if (isFBZ(file)) {
-            const { makeFB2 } = await import('../foliate-js/fb2.js')
-            const entry = entries.find(entry => entry.filename.endsWith('.fb2'))
-            const blob = await loader.loadBlob((entry ?? entries[0]).filename)
-            book = await makeFB2(blob)
-        } else {
-            const { EPUB } = await import('../foliate-js/epub.js')
-            book = await new EPUB(loader).init()
-        }
+    catch (e) {
+        if (e instanceof NotFoundError)
+            emit({ type: 'book-error', id: 'not-found' })
+        else if (e instanceof UnsupportedTypeError)
+            emit({ type: 'book-error', id: 'unsupported-type' })
+        else throw e
     }
-    else if (await isPDF(file)) {
-        const { makePDF } = await import('../foliate-js/pdf.js')
-        book = await makePDF(file)
-    }
-    else {
-        const { isMOBI, MOBI } = await import('../foliate-js/mobi.js')
-        if (await isMOBI(file)) {
-            const fflate = await import('../foliate-js/vendor/fflate.js')
-            book = await new MOBI({ unzlib: fflate.unzlibSync }).open(file)
-        } else if (isFB2(file)) {
-            const { makeFB2 } = await import('../foliate-js/fb2.js')
-            book = await makeFB2(file)
-        }
-    }
-
-    if (!book) {
-        emit({ type: 'book-error', id: 'unsupported-type' })
-        return
-    }
-
-    const reader = new Reader(book)
-    globalThis.reader = reader
-    await reader.init()
-    emit({ type: 'book-ready', book, reader })
 }
 
 const getCSS = ({
@@ -185,7 +108,7 @@ const getCSS = ({
     [align="right"] { text-align: right; }
     [align="center"] { text-align: center; }
     [align="justify"] { text-align: justify; }
-    hgroup p {
+    :is(hgroup, header) p {
         text-align: unset;
         hyphens: unset;
     }
@@ -299,42 +222,7 @@ footnoteDialog.addEventListener('close', () => {
 footnoteDialog.addEventListener('click', e =>
     e.target === footnoteDialog ? footnoteDialog.close() : null)
 
-class CursorAutohider {
-    #timeout
-    #el
-    #check
-    #state
-    constructor(el, check, state = {}) {
-        this.#el = el
-        this.#check = check
-        this.#state = state
-        if (this.#state.hidden) this.hide()
-        this.#el.addEventListener('mousemove', ({ screenX, screenY }) => {
-            // check if it actually moved
-            if (screenX === this.#state.x && screenY === this.#state.y) return
-            this.#state.x = screenX, this.#state.y = screenY
-            this.show()
-            if (this.#timeout) clearTimeout(this.#timeout)
-            if (check()) this.#timeout = setTimeout(this.hide.bind(this), 1000)
-        }, false)
-    }
-    cloneFor(el) {
-        return new CursorAutohider(el, this.#check, this.#state)
-    }
-    hide() {
-        this.#el.style.cursor = 'none'
-        this.#state.hidden = true
-    }
-    show() {
-        this.#el.style.cursor = 'auto'
-        this.#state.hidden = false
-    }
-}
-
 class Reader {
-    autohideCursor
-    #cursorAutohider = new CursorAutohider(
-        document.documentElement, () => this.autohideCursor)
     #footnoteHandler = new FootnoteHandler()
     style = {
         spacing: 1.4,
@@ -414,7 +302,8 @@ class Reader {
             renderer.setStyles?.(getCSS(this.style))
         }
         document.body.classList.toggle('invert', this.style.invert)
-        this.autohideCursor = autohideCursor
+        if (autohideCursor) this.view?.setAttribute('autohide-cursor', '')
+        else this.view?.removeAttribute('autohide-cursor')
     }
     #handleEvents() {
         this.view.addEventListener('relocate', e => {
@@ -423,7 +312,7 @@ class Reader {
                 const { tocItem } = e.detail
                 heads.at(-1).innerText = tocItem?.label ?? ''
                 if (heads.length > 1)
-                    heads[0].innerText = this.book.metadata.title
+                    heads[0].innerText = formatLanguageMap(this.book.metadata.title)
             }
             if (feet) {
                 const { pageItem, location: { current, next, total } } = e.detail
@@ -470,7 +359,10 @@ class Reader {
             emit({ type: 'external-link', ...e.detail })
         })
         this.view.addEventListener('link', e =>
-            this.#footnoteHandler.handle(this.book, e))
+            this.#footnoteHandler.handle(this.book, e)?.catch(err => {
+                console.warn(err)
+                this.view.goTo(e.detail.href)
+            }))
         this.view.addEventListener('load', e => this.#onLoad(e))
         this.view.history.addEventListener('index-change', e => {
             const { canGoBack, canGoForward } = e.target
@@ -487,33 +379,16 @@ class Reader {
                     emit({ type: 'show-image', base64, mimetype }))
                 .catch(e => console.error(e)))
 
-        let isSelecting = false
-        doc.addEventListener('pointerdown', () => isSelecting = true)
         doc.addEventListener('pointerup', () => {
-            isSelecting = false
-            const range = getSelectionRange(doc)
+            const sel = doc.getSelection()
+            const range = getSelectionRange(sel)
             if (!range) return
             const pos = getPosition(range)
             const value = this.view.getCFI(index, range)
             const lang = getLang(range.commonAncestorContainer)
-            this.#showSelection({ index, range, lang, value, pos })
+            const text = sel.toString()
+            this.#showSelection({ index, range, lang, value, pos, text })
         })
-
-        if (!this.view.isFixedLayout)
-            // go to the next page when selecting to the end of a page
-            // this makes it possible to select across pages
-            doc.addEventListener('selectionchange', debounce(() => {
-                if (!isSelecting) return
-                if (this.view.renderer.getAttribute('flow') !== 'paginated') return
-                const { lastLocation } = this.view
-                if (!lastLocation) return
-                const selRange = getSelectionRange(doc)
-                if (!selRange) return
-                if (selRange.compareBoundaryPoints(Range.END_TO_END, lastLocation.range) >= 0)
-                    this.view.next()
-            }, 1000))
-
-        this.#cursorAutohider.cloneFor(doc.documentElement)
     }
     #showAnnotation({ index, range, value, pos }) {
         globalThis.showSelection({ type: 'annotation', value, pos })
@@ -522,9 +397,15 @@ class Reader {
                     this.#showSelection({ index, range, value, pos })
             })
     }
-    #showSelection({ index, range, lang, value, pos }) {
-        const text = range.toString()
-        globalThis.showSelection({ type: 'selection', text, lang, value, pos }).then(action => {
+    #showSelection({ index, range, lang, value, pos, text }) {
+        if (!text) {
+            const sel = range.startContainer.ownerDocument.getSelection()
+            sel.removeAllRanges()
+            sel.addRange(range)
+            text = sel.toString()
+        }
+        const content = range.toString()
+        globalThis.showSelection({ type: 'selection', text, content, lang, value, pos }).then(action => {
             switch (action) {
                 case 'copy': getHTML(range).then(html =>
                     emit({ type: 'selection', action, text, html }))

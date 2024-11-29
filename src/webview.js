@@ -8,6 +8,7 @@ const registerScheme = (name, callback) =>
         try {
             callback(req)
         } catch (e) {
+            console.error(e)
             req.finish_error(new GLib.Error(
                 Gio.IOErrorEnum, Gio.IOErrorEnum.NOT_FOUND, 'Not found'))
         }
@@ -18,14 +19,15 @@ const registerPaths = (name, dirs) => registerScheme(name, req => {
         ? req.get_path().replace(/(?<=\/icons)\/hicolor(?=\/scalable\/)/, '')
         : req.get_path()
     if (dirs.every(dir => !path.startsWith(dir))) throw new Error()
-    const mime = path.endsWith('.js') ? 'application/javascript'
+    const mime = path.endsWith('.js') || path.endsWith('.mjs') ? 'application/javascript'
         : path.endsWith('.svg') ? 'image/svg+xml' : 'text/html'
     const file = Gio.File.new_for_uri(pkg.moduleuri(path))
     req.finish(file.read(null), -1, mime)
 })
 
 registerPaths('foliate', ['/reader/', '/foliate-js/'])
-registerPaths('foliate-opds', ['/opds/', '/foliate-js/', '/icons/'])
+registerPaths('foliate-opds', ['/opds/', '/foliate-js/', '/icons/', '/common/'])
+registerPaths('foliate-selection-tool', ['/selection-tools/', '/icons/', '/common/'])
 
 /*
 `.run_javascript()` is hard to use if you're running an async function. You have

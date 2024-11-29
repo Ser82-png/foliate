@@ -18,8 +18,8 @@ import './navbar.js'
 import { AnnotationPopover, importAnnotations, exportAnnotations } from './annotations.js'
 import { SelectionPopover } from './selection-tools.js'
 import { ImageViewer } from './image-viewer.js'
-import { formatAuthors, makeBookInfoWindow } from './book-info.js'
-import { themes, invertTheme } from './themes.js'
+import { formatLanguageMap, formatAuthors, makeBookInfoWindow } from './book-info.js'
+import { themes, invertTheme, themeCssProvider } from './themes.js'
 import { dataStore } from './data.js'
 
 // for use in the WebView
@@ -172,6 +172,7 @@ GObject.registerClass({
             enable_hyperlink_auditing: false,
             enable_html5_database: false,
             enable_html5_local_storage: false,
+            enable_smooth_scrolling: false,
         }),
         // needed for playing media overlay
         website_policies: new WebKit.WebsitePolicies({
@@ -396,6 +397,7 @@ GObject.registerClass({
     mediaOverlayStart() { return this.#exec('reader.view.startMediaOverlay') }
     mediaOverlayPause() { return this.#exec('reader.view.mediaOverlay.pause') }
     mediaOverlayResume() { return this.#exec('reader.view.mediaOverlay.resume') }
+    mediaOverlayStop() { return this.#exec('reader.view.mediaOverlay.stop') }
     mediaOverlayPrev() { return this.#exec('reader.view.mediaOverlay.prev') }
     mediaOverlayNext() { return this.#exec('reader.view.mediaOverlay.next') }
     mediaOverlaySetVolume(x) { return this.#exec('reader.view.mediaOverlay.setVolume', x) }
@@ -459,7 +461,6 @@ export const BookViewer = GObject.registerClass({
     #book
     #cover
     #data
-    #ttsPaused
     constructor(params) {
         super(params)
         utils.connect(this._view, {
@@ -488,6 +489,8 @@ export const BookViewer = GObject.registerClass({
             this._zoom_button.label = format.percent(webView.zoom_level))
         this._zoom_button.label = format.percent(this._view.webView.zoom_level)
 
+        Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(),
+            themeCssProvider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         let lastThemeClass
         const recolorUI = view => {
             const theme = themes.find(theme => theme.name === view.theme) ?? themes[0]
@@ -653,6 +656,7 @@ export const BookViewer = GObject.registerClass({
             'start': () => this._view.mediaOverlayStart(),
             'pause': () => this._view.mediaOverlayPause(),
             'resume': () => this._view.mediaOverlayResume(),
+            'stop': () => this._view.mediaOverlayStop(),
             'backward': () => this._view.mediaOverlayPrev(),
             'forward': () => this._view.mediaOverlayNext(),
             'notify::volume': box => this._view.mediaOverlaySetVolume(box.volume),
@@ -672,12 +676,12 @@ export const BookViewer = GObject.registerClass({
         utils.addPropertyActions(Adw.StyleManager.get_default(), ['color-scheme'], actions)
         this.insert_action_group('view', this._view.actionGroup)
         this.insert_action_group('viewer', actions)
-        this.add_controller(utils.addShortcuts({
+        const shortcuts = {
             'F9': 'viewer.toggle-sidebar',
             '<ctrl>f|slash': 'viewer.toggle-search',
             '<ctrl>l': 'viewer.show-location',
             '<ctrl>i|<alt>Return': 'viewer.show-info',
-            '<ctrl><alt>t': 'viewer.toggle-toc',
+            '<ctrl>t': 'viewer.toggle-toc',
             '<ctrl><alt>a': 'viewer.toggle-annotations',
             '<ctrl><alt>d': 'viewer.toggle-bookmarks',
             '<ctrl>d': 'viewer.bookmark',
@@ -692,8 +696,8 @@ export const BookViewer = GObject.registerClass({
             'plus|equal|KP_Add|KP_Equal|<ctrl>plus|<ctrl>equal|<ctrl>KP_Add|<ctrl>KP_Equal': 'view.zoom-in',
             'minus|KP_Subtract|<ctrl>minus|<ctrl>KP_Subtract': 'view.zoom-out',
             '0|1|KP_0|<ctrl>0|<ctrl>KP_0': 'view.zoom-restore',
-            'p|Page_Up': 'view.prev',
-            'n|Page_Down': 'view.next',
+            'p|Page_Up|<shift>space': 'view.prev',
+            'n|Page_Down|space': 'view.next',
             'k|Up': 'view.scroll-up',
             'j|Down': 'view.scroll-down',
             'h|Left': 'view.go-left',
@@ -701,18 +705,10 @@ export const BookViewer = GObject.registerClass({
             '<alt>Left': 'view.back',
             '<alt>Right': 'view.forward',
             '<ctrl>p': 'view.print',
-        }))
+        }
+        this.add_controller(utils.addShortcuts(shortcuts))
         // TODO: disable these when pinch zoomed
-        this._view.webView.add_controller(utils.addShortcuts({
-            'Page_Up': 'view.prev',
-            'Page_Down': 'view.next',
-            'Up': 'view.scroll-up',
-            'Down': 'view.scroll-down',
-            'Left': 'view.go-left',
-            'Right': 'view.go-right',
-            '<alt>Left': 'view.back',
-            '<alt>Right': 'view.forward',
-        }))
+        this._view.webView.add_controller(utils.addShortcuts(shortcuts))
     }
     #onError({ id, message, stack }) {
         const desc = id === 'not-found' ? _('File not found')
@@ -731,10 +727,10 @@ export const BookViewer = GObject.registerClass({
         this._top_overlay_box.hide()
         this.#book = book
         book.metadata ??= {}
-        this.root.title = book.metadata.title ?? ''
-        this._book_title.label = book.metadata.title ?? ''
+        this._book_title.label = formatLanguageMap(book.metadata.title)
         this._book_author.label = formatAuthors(book.metadata)
-        this._book_author.visible = !!book.metadata?.author?.length
+        this._book_author.visible = !!this._book_author.label
+        this.root.title = this._book_title.label
 
         const { language: { direction } } = reader.view
         utils.setDirection(this._book_info, direction)
@@ -753,7 +749,7 @@ export const BookViewer = GObject.registerClass({
         this._navbar.loadSectionFractions(reader.sectionFractions)
         this._navbar.loadPageList(book.pageList, reader.pageTotal)
         this._navbar.loadLandmarks(book.landmarks)
-        this._navbar.setTTSType(book.media?.duration?.[''] ? 'media-overlay' : 'tts')
+        this._navbar.setTTSType(book.media?.duration ? 'media-overlay' : 'tts')
 
         const cover = await this._view.getCover()
         this.#cover = cover
@@ -810,7 +806,7 @@ export const BookViewer = GObject.registerClass({
         }), { 'button-clicked': () =>
             this.#data.addAnnotation(annotation) }))
     }
-    #showSelection({ type, value, text, lang, pos: { point, dir } }) {
+    #showSelection({ type, value, text, content, lang, pos: { point, dir } }) {
         if (type === 'annotation') return new Promise(resolve => {
             this._annotation_view.scrollToCFI(value)
             const annotation = this.#data.annotations.get(value)
@@ -832,14 +828,19 @@ export const BookViewer = GObject.registerClass({
                 'highlight': () => {
                     resolved = true
                     const annotation = this.#data.annotations.get(value)
+                    // NOTE: `content` is the `Range.toString()`
+                    // whereas `text` is the `Selection.toString()`;
+                    // not sure which would be better for this use case,
+                    // but my understanding is that a `TextQuoteSelector` is
+                    // expected to be the text itself, not the rendered result
                     this.#data.addAnnotation(annotation ?? {
-                        value, text,
+                        value, text: content,
                         color: this.highlight_color,
                         created: new Date().toISOString(),
                     }).then(() => resolve('highlight'))
                 },
                 'search': () => {
-                    this._search_entry.text = text
+                    this._search_entry.text = content
                     this._search_bar.search_mode_enabled = true
                     this._flap.show_sidebar = true
                     this._search_view.doSearch()

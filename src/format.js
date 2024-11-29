@@ -4,7 +4,7 @@ import { gettext as _ } from 'gettext'
 
 const makeLocale = locale => {
     try { return new Intl.Locale(locale) }
-    catch (e) { return null }
+    catch { return null }
 }
 
 const glibcLocale = str => makeLocale(
@@ -87,7 +87,7 @@ const getRegionEmoji = code => {
         ...Array.from(code.toUpperCase()).map(x => 127397 + x.charCodeAt()))
 }
 const displayName = new Intl.DisplayNames(locales, { type: 'language' })
-export const language = code => {
+const formatLangauge = code => {
     if (!code) return ''
     try {
         const locale = new Intl.Locale(code)
@@ -101,6 +101,11 @@ export const language = code => {
         return ''
     }
 }
+export const language = lang => {
+    if (typeof lang === 'string') return formatLangauge(lang)
+    if (Array.isArray(lang)) return list(lang.map(formatLangauge))
+    return ''
+}
 
 const minuteFormat = new Intl.NumberFormat(locales, { style: 'unit', unit: 'minute' })
 const hourFormat = new Intl.NumberFormat(locales, { style: 'unit', unit: 'hour' })
@@ -113,7 +118,7 @@ export const mime = mime => mime ? Gio.content_type_get_description(mime) : ''
 export const price = (currency, value) => {
     try {
         return new Intl.NumberFormat(locales, { style: 'currency', currency }).format(value)
-    } catch (e) {
+    } catch {
         return (currency ? currency + ' ' : '') + value
     }
 }
