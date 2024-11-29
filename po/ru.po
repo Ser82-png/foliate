@@ -447,13 +447,12 @@ msgid "_Remove"
 msgstr "_Удалить"
 
 #: src/library.js:472
-#, fuzzy
 msgid "Failed to Open"
-msgstr "Не удалось загрузить"
+msgstr "Не удалось открыть"
 
 #: src/library.js:473
 msgid "Could not open the file with the selected application"
-msgstr ""
+msgstr "Не удалось открыть файл с помощью выбранного приложения"
 
 #: src/library.js:644
 msgid "Download Failed"
@@ -572,9 +571,8 @@ msgid "Cannot retrieve translation"
 msgstr "Не удалось получить перевод"
 
 #: src/selection-tools.js:67
-#, fuzzy
 msgid "Search…"
-msgstr "Поиск"
+msgstr "Искать…"
 
 #: src/themes.js:8
 msgid "Default"
@@ -648,7 +646,7 @@ msgstr "Открыть в новом окне"
 
 #: src/ui/book-item.ui:9 src/ui/book-row.ui:9
 msgid "Open with External App"
-msgstr ""
+msgstr "Открыть с помощью внешнего приложения"
 
 #: src/ui/book-item.ui:19 src/ui/book-row.ui:19 src/ui/book-viewer.ui:25
 msgid "Export Annotations…"
@@ -1177,39 +1175,41 @@ msgstr "Быстрая проверка по словарю"
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:55
 msgid "Fixed end of chapter cut off when chapter starts with page break"
 msgstr ""
+"Исправлено прерывание конца главы, когда глава начинается с разрыва страницы"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:56
 msgid "Fixed incorrect text wrapping in tables"
-msgstr ""
+msgstr "Исправлен неправильный перенос текста в таблицах"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:57
 msgid "Fixed a performance issue with OPDS catalogs"
-msgstr ""
+msgstr "Исправлена проблема с производительностью каталогов OPDS"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:64
 msgid "Added support for OPDS catalogs, now with support for OPDS 2.0"
-msgstr ""
+msgstr "Добавлена поддержка каталогов OPDS, теперь поддерживается OPDS 2.0"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:65
-#, fuzzy
 msgid "Added option to override publisher font"
-msgstr "Переопределить шрифт издателя"
+msgstr "Добавлена возможность переопределения шрифта издателя"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:66
 msgid "Added option to reduce animation"
-msgstr ""
+msgstr "Добавлена возможность отключения анимации"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:67
 msgid "Added support for JPEG XL in CBZ"
-msgstr ""
+msgstr "Добавлена поддержка формата JPEG XL в CBZ"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:68
 msgid "Fixed getting file from Tracker in Flatpak"
-msgstr ""
+msgstr "Исправлено получение файла с трекера во Flatpak"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:69
 msgid "Fixed parsing of non-year-only first-century and BCE dates"
 msgstr ""
+"Исправлен синтаксический анализ «non-year-only first-century» и дат до нашей "
+"эры"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:76
 msgid ""
