@@ -14,7 +14,7 @@ import { setConsoleLogDomain } from 'console'
 // mimics (loosely) the `pkg` object set up by GJS if you run `package.init()`
 globalThis.pkg = {
     name: 'com.github.johnfactotum.Foliate',
-    version: '3.2.0',
+    version: '3.2.1',
     MESON,
 }
 pkg.userAgent = `Foliate/${pkg.version}`

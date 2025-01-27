@@ -49,6 +49,15 @@
         </screenshot>
     </screenshots>
     <releases>
+        <release version="3.2.1" date="2024-12-20">
+            <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.2.1</url>
+            <description>
+                <ul>
+                    <li>Fixed tables not displayed in FB2 books</li>
+                    <li>Updated translations</li>
+                </ul>
+            </description>
+        </release>
         <release version="3.2.0" date="2024-11-28">
             <url type="details">https://github.com/johnfactotum/foliate/releases/tag/3.2.0</url>
             <description>

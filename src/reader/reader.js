@@ -383,6 +383,8 @@ class Reader {
             const sel = doc.getSelection()
             const range = getSelectionRange(sel)
             if (!range) return
+            // prevent click event
+            doc.addEventListener('click', e => e.stopPropagation(), { capture: true, once: true })
             const pos = getPosition(range)
             const value = this.view.getCFI(index, range)
             const lang = getLang(range.commonAncestorContainer)

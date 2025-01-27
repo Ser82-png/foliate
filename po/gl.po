@@ -133,7 +133,7 @@ msgstr "Ler e-books con estilo"
 #. they will be shown in the "About" dialog
 #: src/app.js:405
 msgid "translator-credits"
-msgstr "crédito-da-tradución"
+msgstr "@ghose at ⁂"
 
 #: src/app.js:414
 msgid "Source Code"
@@ -440,7 +440,7 @@ msgstr "Fallou a Carga"
 
 #: src/library.js:473
 msgid "Could not open the file with the selected application"
-msgstr ""
+msgstr "Non se puido abrir o ficheiro coa aplicación seleccionada"
 
 #: src/library.js:644
 msgid "Download Failed"
@@ -632,11 +632,11 @@ msgstr "Engadir Nota..."
 
 #: src/ui/book-item.ui:5 src/ui/book-row.ui:5
 msgid "Open in New Window"
-msgstr "Abrir en Nova ventá"
+msgstr "Abrir en Nova xanela"
 
 #: src/ui/book-item.ui:9 src/ui/book-row.ui:9
 msgid "Open with External App"
-msgstr ""
+msgstr "Abrir cunha App Externa"
 
 #: src/ui/book-item.ui:19 src/ui/book-row.ui:19 src/ui/book-viewer.ui:25
 msgid "Export Annotations…"
@@ -644,7 +644,7 @@ msgstr "Exportar Notas..."
 
 #: src/ui/book-viewer.ui:5
 msgid "New Window"
-msgstr "Nova Ventá"
+msgstr "Nova xanela"
 
 #: src/ui/book-viewer.ui:11
 msgid "Open a Copy"
@@ -1152,7 +1152,7 @@ msgstr "Marcadores e notas"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:19
 msgid "Find in book"
-msgstr "Buscas no libro"
+msgstr "Buscar no libro"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:20
 msgid "Quick dictionary lookup"
@@ -1160,40 +1160,40 @@ msgstr "Ollada rápida ao dicionario"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:55
 msgid "Fixed end of chapter cut off when chapter starts with page break"
-msgstr ""
+msgstr "Arranxo do final do corte ao final do capítulo cando comeza cun salto de liña"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:56
 msgid "Fixed incorrect text wrapping in tables"
-msgstr ""
+msgstr "Arranxo do problema cos textos nas táboas"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:57
 msgid "Fixed a performance issue with OPDS catalogs"
-msgstr ""
+msgstr "Arranxo dos problemas de rendemento con catálogos OPDS"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:64
 msgid "Added support for OPDS catalogs, now with support for OPDS 2.0"
-msgstr ""
+msgstr "Engadida compatibilidade con catálogos OPDS, agora compatible con OPDS 2.0"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:65
 #, fuzzy
 msgid "Added option to override publisher font"
-msgstr "Obviar letra da Editorial"
+msgstr "Engadida a opción para obviar o tipo de letra da editorial"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:66
 msgid "Added option to reduce animation"
-msgstr ""
+msgstr "Engadida opción para reducir as animacións"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:67
 msgid "Added support for JPEG XL in CBZ"
-msgstr ""
+msgstr "Engadida compatibilidade con JPEG XL nos CBZ"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:68
 msgid "Fixed getting file from Tracker in Flatpak"
-msgstr ""
+msgstr "Arranxo do problema ao obter o ficheiros de Tracker en Flatpak"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:69
 msgid "Fixed parsing of non-year-only first-century and BCE dates"
-msgstr ""
+msgstr "Arranxo ao procesar datas do primeiro século e anteriores"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:76
 msgid ""

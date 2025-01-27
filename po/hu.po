@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: com.github.johnfactotum.Foliate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-28 11:04+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2024-11-30 18:00+0800\n"
 "Last-Translator: Ádám Szabó <canis_major@outlook.hu>\n"
 "Language-Team: Hungarian <canis_major@outlook.hu>\n"
 "Language: hu_HU\n"
@@ -133,7 +133,7 @@ msgstr "Olvasson e-könyveket stílusosan"
 #. they will be shown in the "About" dialog
 #: src/app.js:405
 msgid "translator-credits"
-msgstr "Ádám Szabó"
+msgstr "Szabó Ádám"
 
 #: src/app.js:414
 msgid "Source Code"
@@ -434,7 +434,7 @@ msgstr "A betöltés sikertelen"
 
 #: src/library.js:473
 msgid "Could not open the file with the selected application"
-msgstr ""
+msgstr "A fájl megnyitása sikertelen volt a kiválasztott alkalmazással"
 
 #: src/library.js:644
 msgid "Download Failed"
@@ -626,7 +626,7 @@ msgstr "Megnyitás új ablakban"
 
 #: src/ui/book-item.ui:9 src/ui/book-row.ui:9
 msgid "Open with External App"
-msgstr ""
+msgstr "Megnyitás külső alkalmazásban"
 
 #: src/ui/book-item.ui:19 src/ui/book-row.ui:19 src/ui/book-viewer.ui:25
 msgid "Export Annotations…"
@@ -1111,9 +1111,9 @@ msgid ""
 "tailored for GNOME. Immerse yourself in a distraction-free interface, with "
 "customization features designed to match your unique preferences."
 msgstr ""
-"Nyisson egy új fejezetet az olvasásban a Foliate segítségével, a modern e-"
-"book olvasóval,melyet a GNOME felülethez igazítottunk. Merüljön el az "
-"olvasásban egy letisztult és személyre szabható felület segítségével,amelyet "
+"Nyisson új fejezetet az olvasásban a Foliate segítségével, a modern e-"
+"book olvasóval, melyet a GNOME felülethez igazítottunk. Merüljön el az "
+"olvasásban egy letisztult és személyre szabható felület segítségével, amelyet "
 "úgy terveztek, hogy igazodjon az Ön egyéni igényeihez."
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:11
@@ -1154,19 +1154,19 @@ msgstr "Gyors keresés a szótárban"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:55
 msgid "Fixed end of chapter cut off when chapter starts with page break"
-msgstr ""
+msgstr "Javított fejezet megjelenítés abban az esetben, ha a fejezet sortöréssel kezdődik"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:56
 msgid "Fixed incorrect text wrapping in tables"
-msgstr ""
+msgstr "Javított szövegelrendezés a táblázatokon belül"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:57
 msgid "Fixed a performance issue with OPDS catalogs"
-msgstr ""
+msgstr "Javításra került az OPDS katalógusoknál fellépő teljesítményprobléma"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:64
 msgid "Added support for OPDS catalogs, now with support for OPDS 2.0"
-msgstr ""
+msgstr "OPDS katalógusok támogatása (mostantól az OPDS 2.0 is támogatott)"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:65
 #, fuzzy
@@ -1175,19 +1175,19 @@ msgstr "A beépített betűtípus felülírása"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:66
 msgid "Added option to reduce animation"
-msgstr ""
+msgstr "Csökkenthető programanimáció"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:67
 msgid "Added support for JPEG XL in CBZ"
-msgstr ""
+msgstr "A CBZ fájlokban elhelyezett JPEG XL elemek támogatása"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:68
 msgid "Fixed getting file from Tracker in Flatpak"
-msgstr ""
+msgstr "A Trackerből történő fájl megnyitás javításra került a Flatpak csomagban"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:69
 msgid "Fixed parsing of non-year-only first-century and BCE dates"
-msgstr ""
+msgstr "Dátumfeldolgozással kapcsolatos hibák javítása"
 
 #: data/com.github.johnfactotum.Foliate.metainfo.xml.in:76
 msgid ""
