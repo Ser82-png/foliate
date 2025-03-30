@@ -238,6 +238,13 @@ class Reader {
             ?.findLast(x => !isNaN(parseInt(x.label)))?.label
         this.style.mediaActiveClass = book.media?.activeClass
 
+        this.book.transformTarget?.addEventListener('data', ({ detail }) => {
+            detail.data = Promise.resolve(detail.data).catch(e => {
+                console.error(new Error(`Failed to load ${detail.name}`, { cause: e }))
+                return ''
+            })
+        })
+
         this.#footnoteHandler.addEventListener('before-render', e => {
             const { view } = e.detail
             view.addEventListener('link', e => {

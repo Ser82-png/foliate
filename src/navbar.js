@@ -81,7 +81,7 @@ GObject.registerClass({
     }
     update(item) {
         this.#shouldGo = false
-        this.selected = this.#indices?.get?.(item?.id) ?? -1
+        this.selected = this.#indices?.get?.(item?.id) ?? 0xffffffff
         this.#shouldGo = true
     }
 })
